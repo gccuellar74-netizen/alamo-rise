@@ -121,7 +121,7 @@ export function Hero({
             <div className="relative overflow-hidden rounded-2xl bg-charcoal-100 shadow-elevated lg:min-h-[560px] xl:min-h-[620px]">
               <div className="relative aspect-[4/3] w-full lg:absolute lg:inset-0 lg:aspect-auto">
                 <Image
-                  src="/images/home/hero-home-remodeling-san-antonio.webp"
+                  src="/images/hero.jpg"
                   alt={
                     isEnglish
                       ? "Remodeled residential interior in San Antonio, Texas"

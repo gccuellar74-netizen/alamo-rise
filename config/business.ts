@@ -140,8 +140,8 @@ export const business = {
    * We will prepare the actual optimized files later.
    */
   brand: {
-    logo: "/images/brand/alamo-rise-logo.webp",
-    logoDark: "/images/brand/alamo-rise-logo-dark.webp",
+    logo: "/images/logo.png",
+    logoDark: "/images/logo2.png",
     mark: "/images/brand/alamo-rise-mark.webp",
     defaultSocialImage: "/images/social/alamo-rise-og-image.jpg",
   },

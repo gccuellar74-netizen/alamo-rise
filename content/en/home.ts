@@ -74,40 +74,35 @@ export const home = {
         title: "Kitchen Remodeling",
         description:
           "Create a more functional, comfortable and inviting kitchen with a remodeling plan built around your home and everyday needs.",
-        image:
-          "/images/services/kitchen-remodeling-san-antonio.webp",
+        image: "/images/kitchen.png",
       },
       {
         key: "bathroom-remodeling",
         title: "Bathroom Remodeling",
         description:
           "Upgrade outdated bathrooms with improved layouts, finishes, storage and practical features.",
-        image:
-          "/images/services/bathroom-remodeling-san-antonio.webp",
+     image: "/images/bathroom.png",
       },
       {
         key: "interior-remodeling",
         title: "Interior Remodeling",
         description:
           "Refresh and improve interior spaces with coordinated remodeling, repairs and finishing work.",
-        image:
-          "/images/services/interior-remodeling-san-antonio.webp",
+        image: "/images/interior.png",
       },
       {
         key: "exterior-improvements",
         title: "Exterior Improvements",
         description:
           "Improve curb appeal and outdoor living with siding, windows, doors, patios, pergolas and exterior painting.",
-        image:
-          "/images/services/siding-san-antonio.webp",
+        image: "/images/siding.png",
       },
       {
         key: "general-repairs",
         title: "General Repairs & Improvements",
         description:
           "Take care of repairs, upgrades and home improvement projects with one team coordinating the work.",
-        image:
-          "/images/services/home-repairs-san-antonio.webp",
+        image: "/images/repairs.png",
       },
     ],
 
@@ -167,11 +162,11 @@ export const home = {
     beforeLabel: "Before",
     afterLabel: "After",
 
-    imageBefore: "/images/home/before-kitchen-remodel.webp",
-    imageAfter: "/images/home/after-kitchen-remodel.webp",
+    imageBefore: "/images/before1.png",
+    imageAfter: "/images/after1.png",
 
     altBefore: "Kitchen before remodeling",
-    altAfter: "Kitchen after remodeling",
+    altAfter: "/images/after1.png",
 
     disclaimer:
       "PLACEHOLDER IMAGES: Replace with verified Alamo Rise project photography before production.",
@@ -192,8 +187,7 @@ export const home = {
         location: "Alamo Heights, TX",
         description:
           "A kitchen-focused renovation designed to improve layout, finishes and everyday functionality.",
-        image:
-          "/images/projects/kitchen-renovation-alamo-heights.webp",
+        image: "/images/kitchen-1.png",
         verified: false,
       },
       {
@@ -202,8 +196,7 @@ export const home = {
         location: "Stone Oak, TX",
         description:
           "A bathroom update focused on a cleaner layout, refreshed finishes and improved usability.",
-        image:
-          "/images/projects/bathroom-remodel-stone-oak.webp",
+        image: "/images/bathroom2.png",
         verified: false,
       },
       {
@@ -212,8 +205,7 @@ export const home = {
         location: "San Antonio, TX",
         description:
           "An outdoor improvement project designed to create a more useful and comfortable space.",
-        image:
-          "/images/projects/patio-upgrade-san-antonio.webp",
+        image: "/images/patio2.png",
         verified: false,
       },
     ],
@@ -366,7 +358,7 @@ export const home = {
     secondaryDescription:
       "From the first conversation through the final walkthrough, the experience should feel organized, professional and focused on the needs of your home.",
 
-    image: "/images/home/san-antonio-remodeling-team.webp",
+    image: "/images/about.png",
 
     imageAlt:
       "Alamo Rise Home Solutions residential remodeling team in San Antonio",
