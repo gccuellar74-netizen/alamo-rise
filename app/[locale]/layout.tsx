@@ -159,6 +159,7 @@ export default async function LocaleLayout({
     <html
       lang={localeCodes[locale]}
       className={`${inter.variable} ${playfairDisplay.variable}`}
+      data-scroll-behavior="smooth"
     >
       <body className="bg-white text-charcoal-950">
         <a
