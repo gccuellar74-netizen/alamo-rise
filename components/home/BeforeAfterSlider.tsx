@@ -146,12 +146,11 @@ export function BeforeAfterSlider({
             />
 
             <div
-              className="absolute inset-y-0 left-0 overflow-hidden"
-              style={{
-                width: `${position}%`,
-              }}
-            >
-              <div className="absolute inset-0 min-w-[100vw] lg:min-w-[80rem]">
+              className="absolute inset-0 overflow-hidden"
+                style={{
+                  clipPath: `inset(0 ${100 - position}% 0 0)`,
+                }}
+              >
                 <Image
                   src={content.imageBefore}
                   alt={content.altBefore}
@@ -160,7 +159,6 @@ export function BeforeAfterSlider({
                   className="pointer-events-none object-cover"
                 />
               </div>
-            </div>
 
             <div className="pointer-events-none absolute left-4 top-4 rounded-full bg-black/65 px-3 py-1.5 text-xs font-bold uppercase tracking-[0.12em] text-white backdrop-blur-sm">
               {content.beforeLabel}
