@@ -20,8 +20,7 @@ export const services = [
       href: routes.es.service.kitchenRemodeling,
     },
 
-    image:
-      "/images/services/kitchen-remodeling-san-antonio.webp",
+    image: "/images/kitchen.png",
 
     imageAlt: {
       en: "Kitchen remodeling project in San Antonio, Texas",
@@ -50,8 +49,7 @@ export const services = [
       href: routes.es.service.bathroomRemodeling,
     },
 
-    image:
-      "/images/services/bathroom-remodeling-san-antonio.webp",
+   image: "/images/bathroom.png",
 
     imageAlt: {
       en: "Bathroom remodeling project in San Antonio, Texas",
@@ -80,8 +78,7 @@ export const services = [
       href: routes.es.service.interiorRemodeling,
     },
 
-    image:
-      "/images/services/interior-remodeling-san-antonio.webp",
+    image: "/images/interior.png",
 
     imageAlt: {
       en: "Residential interior remodeling in San Antonio, Texas",
@@ -109,9 +106,7 @@ export const services = [
         "Reemplaza pisos anticuados o dañados para mejorar la apariencia, durabilidad y comodidad de los espacios interiores.",
       href: routes.es.service.flooring,
     },
-
-    image:
-      "/images/services/flooring-san-antonio.webp",
+    image: "/images/flooring.png",
 
     imageAlt: {
       en: "Residential flooring installation in San Antonio, Texas",
@@ -140,8 +135,7 @@ export const services = [
       href: routes.es.service.drywall,
     },
 
-    image:
-      "/images/services/drywall-san-antonio.webp",
+    image: "/images/drywall.png",
 
     imageAlt: {
       en: "Residential drywall installation and repair in San Antonio",
@@ -170,8 +164,7 @@ export const services = [
       href: routes.es.service.painting,
     },
 
-    image:
-      "/images/services/painting-san-antonio.webp",
+    image: "/images/painting.png",
 
     imageAlt: {
       en: "Interior and exterior residential painting in San Antonio",
@@ -200,8 +193,7 @@ export const services = [
       href: routes.es.service.siding,
     },
 
-    image:
-      "/images/services/siding-san-antonio.webp",
+    image:"/images/siding.png",
 
     imageAlt: {
       en: "Residential siding improvement in San Antonio, Texas",
@@ -231,7 +223,7 @@ export const services = [
     },
 
     image:
-      "/images/services/windows-doors-san-antonio.webp",
+      "/images/windows.png",
 
     imageAlt: {
       en: "Residential window and door improvements in San Antonio",
@@ -261,7 +253,7 @@ export const services = [
     },
 
     image:
-      "/images/services/patio-construction-san-antonio.webp",
+      "/images/patio2.png",
 
     imageAlt: {
       en: "Residential patio improvement in San Antonio, Texas",
@@ -291,7 +283,7 @@ export const services = [
     },
 
     image:
-      "/images/services/pergola-san-antonio.webp",
+      "/images/pergola.png",
 
     imageAlt: {
       en: "Residential pergola in San Antonio, Texas",
@@ -321,7 +313,7 @@ export const services = [
     },
 
     image:
-      "/images/services/home-repairs-san-antonio.webp",
+      "/images/repairs.png",
 
     imageAlt: {
       en: "Residential home repair and improvement project in San Antonio",
