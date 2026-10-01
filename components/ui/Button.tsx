@@ -50,8 +50,8 @@ const variantClasses: Record<
   ButtonVariant,
   string
 > = {
-  primary:
-    "bg-brand-600 text-white shadow-sm hover:bg-brand-700 active:bg-brand-800",
+ primary:
+  "bg-brand-600 text-white! shadow-sm hover:bg-brand-700 hover:text-white! active:bg-brand-800",
 
   secondary:
     "border border-charcoal-300 bg-white text-charcoal-950 hover:border-charcoal-400 hover:bg-charcoal-50",
