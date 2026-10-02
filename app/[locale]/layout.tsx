@@ -68,7 +68,7 @@ export async function generateMetadata({
   const canonicalPath = isEnglish ? "/en" : "/es";
 
   return {
-    metadataBase: new URL(business.siteUrl),
+    metadataBase: new URL(seo.siteUrl),
 
     title: {
       default: title,
@@ -138,7 +138,6 @@ export async function generateMetadata({
 
     icons: {
       icon: "/favicon.ico",
-      apple: "/apple-icon.png",
     },
   };
 }
