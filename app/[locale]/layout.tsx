@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import { Inter, Playfair_Display } from "next/font/google";
 import { notFound } from "next/navigation";
-
+import { GoogleTagManager } from "@/components/analytics/GoogleTagManager";
 import "@/app/globals.css";
 
 import { Footer } from "@/components/layout/Footer";
@@ -161,6 +161,10 @@ export default async function LocaleLayout({
       data-scroll-behavior="smooth"
     >
       <body className="bg-white text-charcoal-950">
+
+        <GoogleTagManager
+          gtmId={process.env.NEXT_PUBLIC_GTM_ID}
+          />
         <a
           href="#main-content"
           className="sr-only focus:not-sr-only focus:fixed focus:left-4 focus:top-4 focus:z-[100] focus:rounded-md focus:bg-white focus:px-4 focus:py-3 focus:text-charcoal-950 focus:shadow-elevated"
@@ -177,6 +181,9 @@ export default async function LocaleLayout({
         <Footer locale={locale} />
 
         <MobileStickyCTA locale={locale} />
+
+
+        
       </body>
     </html>
   );
