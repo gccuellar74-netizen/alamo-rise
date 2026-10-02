@@ -67,11 +67,6 @@ export function AboutPreview({
               </Link>
             </div>
 
-            {!content.imageVerified ? (
-              <p className="mt-5 text-xs leading-5 text-charcoal-500">
-                {content.imageNotice}
-              </p>
-            ) : null}
           </div>
 
           <div className="order-1 lg:order-2">
@@ -86,11 +81,6 @@ export function AboutPreview({
                 />
               </div>
 
-              {!content.imageVerified ? (
-                <div className="absolute left-4 top-4 rounded-full bg-black/70 px-3 py-1.5 text-[0.65rem] font-bold uppercase tracking-[0.12em] text-white backdrop-blur-sm">
-                  Placeholder
-                </div>
-              ) : null}
             </div>
           </div>
         </div>

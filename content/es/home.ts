@@ -213,7 +213,7 @@ export const home = {
     ],
 
     placeholderNotice:
-      "PLACEHOLDERS DE PROYECTOS: Reemplazar con proyectos reales de Alamo Rise y ubicaciones verificadas antes de publicar.",
+      "",
 
     cta: "Ver Proyectos",
   },

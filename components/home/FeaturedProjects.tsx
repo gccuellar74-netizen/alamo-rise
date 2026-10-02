@@ -78,12 +78,6 @@ export function FeaturedProjects({
                   className="object-cover transition-transform duration-500 group-hover:scale-[1.03]"
                 />
 
-                {!project.verified ? (
-                  <div className="absolute left-4 top-4 rounded-full bg-black/70 px-3 py-1.5 text-[0.65rem] font-bold uppercase tracking-[0.12em] text-white backdrop-blur-sm">
-                    Placeholder
-                  </div>
-                ) : null}
-
                 <div
                   aria-hidden="true"
                   className="pointer-events-none absolute inset-0 bg-gradient-to-t from-black/20 via-transparent to-transparent"

@@ -169,7 +169,7 @@ export const home = {
     altAfter: "/images/after1.png",
 
     disclaimer:
-      "PLACEHOLDER IMAGES: Replace with verified Alamo Rise project photography before production.",
+      "",
   },
 
   featuredProjects: {
@@ -211,7 +211,7 @@ export const home = {
     ],
 
     placeholderNotice:
-      "PROJECT PLACEHOLDERS: Replace with real Alamo Rise projects and verified locations before publishing.",
+      "",
 
     cta: "View Projects",
   },

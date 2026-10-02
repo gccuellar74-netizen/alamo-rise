@@ -17,9 +17,15 @@ type TestimonialsSectionProps = {
 
 export function TestimonialsSection({
   content,
-  locale,
 }: TestimonialsSectionProps) {
-  const isEnglish = locale === "en";
+  const verifiedReviews = content.reviews.filter(
+    (review) => review.verified,
+  );
+
+  if (verifiedReviews.length === 0) {
+    return null;
+  }
+
 
   return (
     <section
@@ -45,7 +51,7 @@ export function TestimonialsSection({
         </div>
 
         <div className="mt-10 grid gap-6 lg:mt-14 lg:grid-cols-3">
-          {content.reviews.map((review, index) => (
+          {verifiedReviews.map((review, index) => (
             <article
               key={`${review.customerName}-${index}`}
               className="relative rounded-2xl border border-charcoal-100 bg-white p-6 shadow-soft sm:p-7"
@@ -58,11 +64,6 @@ export function TestimonialsSection({
                   />
                 </div>
 
-                {!review.verified ? (
-                  <span className="rounded-full bg-charcoal-100 px-3 py-1 text-[0.65rem] font-bold uppercase tracking-[0.12em] text-charcoal-600">
-                    Placeholder
-                  </span>
-                ) : null}
               </div>
 
               {review.rating !== null ? (
@@ -122,29 +123,24 @@ export function TestimonialsSection({
           ))}
         </div>
 
-        {business.googleReviewsUrl ? (
-          <div className="mt-10 flex justify-center lg:mt-12">
-            <Link
-              href={business.googleReviewsUrl}
-              target="_blank"
-              rel="noreferrer"
-              className="inline-flex min-h-12 items-center justify-center gap-2 rounded-md border border-charcoal-300 bg-white px-5 py-3 text-sm font-semibold text-charcoal-950 transition-colors hover:border-charcoal-400 hover:bg-charcoal-50 focus-visible:outline-none focus-visible:ring-4 focus-visible:ring-brand-600/20 sm:text-base"
-            >
-              {content.cta}
+       {business.googleReviewsUrl ? (
+  <div className="mt-10 flex justify-center lg:mt-12">
+    <Link
+      href={business.googleReviewsUrl}
+      target="_blank"
+      rel="noreferrer"
+      className="inline-flex min-h-12 items-center justify-center gap-2 rounded-md border border-charcoal-300 bg-white px-5 py-3 text-sm font-semibold text-charcoal-950 transition-colors hover:border-charcoal-400 hover:bg-charcoal-50 focus-visible:outline-none focus-visible:ring-4 focus-visible:ring-brand-600/20 sm:text-base"
+    >
+      {content.cta}
 
-              <ExternalLink
-                aria-hidden="true"
-                className="size-4"
-              />
-            </Link>
-          </div>
-        ) : (
-          <p className="mt-8 text-center text-xs leading-5 text-charcoal-500">
-            {isEnglish
-              ? "Google Reviews link will appear here once the verified business profile URL is added."
-              : "El enlace a las reseñas de Google aparecerá aquí cuando agreguemos la URL verificada del perfil del negocio."}
-          </p>
-        )}
+      <ExternalLink
+        aria-hidden="true"
+        className="size-4"
+      />
+    </Link>
+  </div>
+) : null}
+
       </Container>
     </section>
   );
