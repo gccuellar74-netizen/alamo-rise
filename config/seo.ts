@@ -1,6 +1,12 @@
 import { business } from "@/config/business";
 
+const siteUrl =
+  process.env.NEXT_PUBLIC_SITE_URL?.replace(/\/$/, "") ??
+  "https://www.alamorise.com";
+
 export const seo = {
+  siteUrl,
+
   siteName: business.businessName,
 
   defaultTitle:
