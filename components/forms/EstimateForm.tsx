@@ -214,10 +214,13 @@ trackEvent("form_submit", {
   project_type: payload.projectType,
 });
 
+await new Promise((resolve) => {
+  window.setTimeout(resolve, 300);
+});
+
 formElement.reset();
 
 router.push(thankYouUrl);
-
 
 
 
