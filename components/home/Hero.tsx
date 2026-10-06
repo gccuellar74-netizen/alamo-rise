@@ -1,13 +1,13 @@
 import Image from "next/image";
 import { CheckCircle2, Phone } from "lucide-react";
 
+import { TrackedButton } from "@/components/analytics/TrackedButton";
+import { Container } from "@/components/ui/Container";
 import { business } from "@/config/business";
 import { routes } from "@/config/routes";
-import { Button } from "@/components/ui/Button";
-import { Container } from "@/components/ui/Container";
-import type { Locale } from "@/lib/i18n/config";
 import type { EnglishHomeDictionary } from "@/content/en/home";
 import type { SpanishHomeDictionary } from "@/content/es/home";
+import type { Locale } from "@/lib/i18n/config";
 
 type HomeDictionary =
   | EnglishHomeDictionary
@@ -60,22 +60,32 @@ export function Hero({
             </p>
 
             <div className="mt-8 flex flex-col gap-3 sm:flex-row sm:flex-wrap">
-              <Button
+              <TrackedButton
                 href={estimateUrl}
+                eventName="click_estimate"
+                eventData={{
+                  location: "home_hero",
+                  locale,
+                }}
                 variant="primary"
                 size="lg"
                 className="sm:min-w-[190px]"
               >
                 {content.primaryCta}
-              </Button>
+              </TrackedButton>
 
               {phoneHref ? (
-                <Button
+                <TrackedButton
                   href={phoneHref}
+                  eventName="click_call"
+                  eventData={{
+                    location: "home_hero",
+                    locale,
+                  }}
                   variant="secondary"
                   size="lg"
                   className="sm:min-w-[150px]"
-                  aria-label={
+                  ariaLabel={
                     isEnglish
                       ? "Call Alamo Rise Home Solutions"
                       : "Llamar a Alamo Rise Home Solutions"
@@ -87,7 +97,7 @@ export function Hero({
                   />
 
                   {content.secondaryCta}
-                </Button>
+                </TrackedButton>
               ) : null}
             </div>
 
