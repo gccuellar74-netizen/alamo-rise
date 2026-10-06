@@ -8,6 +8,9 @@ import { common as englishCommon } from "@/content/en/common";
 import { common as spanishCommon } from "@/content/es/common";
 import { routes } from "@/config/routes";
 import type { Locale } from "@/lib/i18n/config";
+import { trackEvent } from "@/lib/analytics/events";
+
+
 
 type EstimateFormProps = {
   locale: Locale;
@@ -199,15 +202,25 @@ export function EstimateForm({
         body: JSON.stringify(payload),
       });
 
-      if (!response.ok) {
-        throw new Error(
-          "Lead submission failed",
-        );
-      }
+if (!response.ok) {
+  throw new Error(
+    "Lead submission failed",
+  );
+}
 
-      formElement.reset();
+trackEvent("form_submit", {
+  location: "estimate_form",
+  locale,
+  project_type: payload.projectType,
+});
 
-      router.push(thankYouUrl);
+formElement.reset();
+
+router.push(thankYouUrl);
+
+
+
+
     } catch {
       setStatus("error");
 
