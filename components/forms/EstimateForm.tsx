@@ -208,7 +208,7 @@ if (!response.ok) {
   );
 }
 
-trackEvent("form_submit", {
+trackEvent("generate_lead", {
   location: "estimate_form",
   locale,
   project_type: payload.projectType,

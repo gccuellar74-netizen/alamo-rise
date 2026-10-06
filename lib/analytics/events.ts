@@ -2,7 +2,7 @@ export type AnalyticsEventName =
   | "click_call"
   | "click_estimate"
   | "form_start"
-  | "form_submit"
+  | "generate_lead"
   | "view_service"
   | "view_project"
   | "click_google_reviews"
