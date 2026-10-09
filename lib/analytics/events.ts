@@ -6,7 +6,8 @@ export type AnalyticsEventName =
   | "view_service"
   | "view_project"
   | "click_google_reviews"
-  | "financing_click";
+  | "financing_click"
+  | "consent_update";
 
 type AnalyticsEventPayload = {
   event: AnalyticsEventName;

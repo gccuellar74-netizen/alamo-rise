@@ -2,6 +2,9 @@ import type { Metadata } from "next";
 import { Inter, Playfair_Display } from "next/font/google";
 import { notFound } from "next/navigation";
 import { GoogleTagManager } from "@/components/analytics/GoogleTagManager";
+import { GoogleConsentMode } from "@/components/analytics/GoogleConsentMode";
+import { CookieConsentBanner } from "@/components/analytics/CookieConsentBanner";
+
 import "@/app/globals.css";
 
 import { Footer } from "@/components/layout/Footer";
@@ -161,7 +164,7 @@ export default async function LocaleLayout({
       data-scroll-behavior="smooth"
     >
       <body className="bg-white text-charcoal-950">
-
+        <GoogleConsentMode />
         <GoogleTagManager
           gtmId={process.env.NEXT_PUBLIC_GTM_ID}
           />
@@ -183,7 +186,7 @@ export default async function LocaleLayout({
         <MobileStickyCTA locale={locale} />
 
 
-        
+       <CookieConsentBanner />
       </body>
     </html>
   );
