@@ -186,7 +186,7 @@ export default async function LocaleLayout({
         <MobileStickyCTA locale={locale} />
 
 
-       <CookieConsentBanner />
+       <CookieConsentBanner locale={locale} />
       </body>
     </html>
   );

@@ -4,6 +4,10 @@ import { useEffect, useState } from "react";
 
 type ConsentChoice = "accepted" | "rejected";
 
+type CookieConsentBannerProps = {
+  locale: "en" | "es";
+};
+
 const STORAGE_KEY = "alamo-rise-cookie-consent";
 
 function updateGoogleConsent(choice: ConsentChoice) {
@@ -32,27 +36,29 @@ function updateGoogleConsent(choice: ConsentChoice) {
   });
 }
 
-export function CookieConsentBanner() {
+export function CookieConsentBanner({
+  locale,
+}: CookieConsentBannerProps) {
   const [isVisible, setIsVisible] = useState(false);
 
-useEffect(() => {
-  const savedChoice = window.localStorage.getItem(
-    STORAGE_KEY,
-  ) as ConsentChoice | null;
+  useEffect(() => {
+    const savedChoice = window.localStorage.getItem(
+      STORAGE_KEY,
+    ) as ConsentChoice | null;
 
-  if (savedChoice) {
-    updateGoogleConsent(savedChoice);
-    return;
-  }
+    if (savedChoice) {
+      updateGoogleConsent(savedChoice);
+      return;
+    }
 
-  const timeoutId = window.setTimeout(() => {
-    setIsVisible(true);
-  }, 0);
+    const timeoutId = window.setTimeout(() => {
+      setIsVisible(true);
+    }, 0);
 
-  return () => {
-    window.clearTimeout(timeoutId);
-  };
-}, []);
+    return () => {
+      window.clearTimeout(timeoutId);
+    };
+  }, []);
 
   function handleChoice(choice: ConsentChoice) {
     window.localStorage.setItem(STORAGE_KEY, choice);
@@ -61,6 +67,23 @@ useEffect(() => {
 
     setIsVisible(false);
   }
+
+  const copy =
+    locale === "es"
+      ? {
+          title: "Preferencias de cookies",
+          description:
+            "Usamos tecnologías de analítica y publicidad para entender el uso del sitio y mejorar el rendimiento de marketing. Puedes aceptar o rechazar las cookies opcionales.",
+          reject: "Rechazar",
+          accept: "Aceptar",
+        }
+      : {
+          title: "Cookie preferences",
+          description:
+            "We use analytics and advertising technologies to understand site usage and improve marketing performance. You can accept or reject optional cookies.",
+          reject: "Reject",
+          accept: "Accept",
+        };
 
   if (!isVisible) {
     return null;
@@ -71,14 +94,11 @@ useEffect(() => {
       <div className="mx-auto flex max-w-7xl flex-col gap-4 px-4 py-5 sm:px-6 lg:flex-row lg:items-center lg:justify-between lg:px-8">
         <div className="max-w-3xl">
           <p className="text-sm font-semibold text-charcoal-950">
-            Cookie preferences
+            {copy.title}
           </p>
 
           <p className="mt-1 text-sm leading-6 text-charcoal-600">
-            We use analytics and advertising technologies to
-            understand site usage and improve marketing
-            performance. You can accept or reject optional
-            cookies.
+            {copy.description}
           </p>
         </div>
 
@@ -88,7 +108,7 @@ useEffect(() => {
             onClick={() => handleChoice("rejected")}
             className="min-h-11 rounded-md border border-charcoal-300 bg-white px-5 py-2.5 text-sm font-semibold text-charcoal-950 transition-colors hover:bg-charcoal-50"
           >
-            Reject
+            {copy.reject}
           </button>
 
           <button
@@ -96,7 +116,7 @@ useEffect(() => {
             onClick={() => handleChoice("accepted")}
             className="min-h-11 rounded-md bg-brand-600 px-5 py-2.5 text-sm font-semibold text-white transition-colors hover:bg-brand-700"
           >
-            Accept
+            {copy.accept}
           </button>
         </div>
       </div>
