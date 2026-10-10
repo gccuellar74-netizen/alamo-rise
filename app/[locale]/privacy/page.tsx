@@ -16,7 +16,7 @@ const content = {
     eyebrow: "Legal",
     title: "Privacy Policy",
     intro:
-      "This Privacy Policy explains how Alamo Rise Home Solutions may collect, use and protect information submitted through this website.",
+      "This Privacy Policy explains how Alamo Rise Home Solutions may collect, use and protect information submitted through this website and how analytics and advertising technologies may be used.",
     sections: [
       {
         title: "Information We Collect",
@@ -31,12 +31,17 @@ const content = {
       {
         title: "Analytics and Advertising",
         body:
-          "The website may use analytics and advertising technologies to measure website activity, campaign performance and interactions such as calls, estimate requests and form submissions.",
+          "The website uses Google Tag Manager and may use Google Analytics and related advertising technologies to measure website activity, campaign performance and interactions such as page views, estimate requests and successful form submissions.",
+      },
+      {
+        title: "Cookies and Consent Preferences",
+        body:
+          "Optional analytics and advertising storage is set to denied by default until you make a choice through the cookie preferences banner. If you select Accept, optional analytics and advertising storage may be enabled. If you select Reject, those optional storage permissions remain denied. Your selection is stored locally in your browser so the website can remember your preference.",
       },
       {
         title: "Information Sharing",
         body:
-          "Personal information is not intended to be sold. Information may be shared with service providers when reasonably necessary to operate the website, process requests or support business operations.",
+          "Personal information is not intended to be sold. Information may be shared with service providers when reasonably necessary to operate the website, process requests, measure website performance or support business operations.",
       },
       {
         title: "Data Security",
@@ -46,12 +51,17 @@ const content = {
       {
         title: "Your Choices",
         body:
-          "You may contact Alamo Rise Home Solutions to ask questions about information you submitted through the website or to request updates to your contact information.",
+          "You may accept or reject optional analytics and advertising technologies through the cookie preferences banner. You may also use your browser controls to clear stored site data. You may contact Alamo Rise Home Solutions to ask questions about information you submitted through the website or to request updates to your contact information.",
+      },
+      {
+        title: "Third-Party Services",
+        body:
+          "The website may rely on third-party service providers for hosting, analytics, advertising measurement, database services and other website operations. Those providers may process limited information according to their own privacy practices and the services they provide.",
       },
       {
         title: "Policy Updates",
         body:
-          "This Privacy Policy may be updated as the website, services or business practices change. The current version will be published on this page.",
+          "This Privacy Policy may be updated as the website, services, technologies or business practices change. The current version will be published on this page.",
       },
     ],
     backHome: "Return Home",
@@ -62,7 +72,7 @@ const content = {
     eyebrow: "Legal",
     title: "Política de Privacidad",
     intro:
-      "Esta Política de Privacidad explica cómo Alamo Rise Home Solutions puede recopilar, utilizar y proteger la información enviada a través de este sitio web.",
+      "Esta Política de Privacidad explica cómo Alamo Rise Home Solutions puede recopilar, utilizar y proteger la información enviada a través de este sitio web y cómo pueden utilizarse tecnologías de analítica y publicidad.",
     sections: [
       {
         title: "Información que Recopilamos",
@@ -77,12 +87,17 @@ const content = {
       {
         title: "Analítica y Publicidad",
         body:
-          "El sitio puede utilizar tecnologías de analítica y publicidad para medir la actividad del sitio, el rendimiento de campañas y acciones como llamadas, solicitudes de cotización y envíos de formularios.",
+          "El sitio utiliza Google Tag Manager y puede utilizar Google Analytics y tecnologías relacionadas con publicidad para medir la actividad del sitio, el rendimiento de campañas y acciones como vistas de página, solicitudes de cotización y envíos exitosos de formularios.",
+      },
+      {
+        title: "Cookies y Preferencias de Consentimiento",
+        body:
+          "El almacenamiento opcional de analítica y publicidad se establece como denegado de forma predeterminada hasta que eliges una opción en el banner de preferencias de cookies. Si seleccionas Aceptar, puede habilitarse el almacenamiento opcional de analítica y publicidad. Si seleccionas Rechazar, esos permisos opcionales permanecen denegados. Tu elección se guarda localmente en tu navegador para que el sitio pueda recordar tu preferencia.",
       },
       {
         title: "Compartir Información",
         body:
-          "La información personal no está destinada a venderse. Puede compartirse con proveedores de servicios cuando sea razonablemente necesario para operar el sitio, procesar solicitudes o apoyar las operaciones del negocio.",
+          "La información personal no está destinada a venderse. Puede compartirse con proveedores de servicios cuando sea razonablemente necesario para operar el sitio, procesar solicitudes, medir el rendimiento del sitio o apoyar las operaciones del negocio.",
       },
       {
         title: "Seguridad de Datos",
@@ -92,12 +107,17 @@ const content = {
       {
         title: "Tus Opciones",
         body:
-          "Puedes contactar a Alamo Rise Home Solutions para hacer preguntas sobre la información que enviaste a través del sitio o solicitar actualizaciones de tus datos de contacto.",
+          "Puedes aceptar o rechazar las tecnologías opcionales de analítica y publicidad mediante el banner de preferencias de cookies. También puedes utilizar los controles de tu navegador para borrar los datos almacenados del sitio. Puedes contactar a Alamo Rise Home Solutions para hacer preguntas sobre la información que enviaste a través del sitio o solicitar actualizaciones de tus datos de contacto.",
+      },
+      {
+        title: "Servicios de Terceros",
+        body:
+          "El sitio puede utilizar proveedores externos para alojamiento, analítica, medición de publicidad, servicios de base de datos y otras operaciones del sitio web. Esos proveedores pueden procesar información limitada de acuerdo con sus propias prácticas de privacidad y los servicios que proporcionan.",
       },
       {
         title: "Actualizaciones de esta Política",
         body:
-          "Esta Política de Privacidad puede actualizarse conforme cambien el sitio web, los servicios o las prácticas del negocio. La versión vigente se publicará en esta página.",
+          "Esta Política de Privacidad puede actualizarse conforme cambien el sitio web, los servicios, las tecnologías o las prácticas del negocio. La versión vigente se publicará en esta página.",
       },
     ],
     backHome: "Volver al Inicio",

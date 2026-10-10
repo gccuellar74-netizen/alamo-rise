@@ -1,10 +1,11 @@
 import Image from "next/image";
 import Link from "next/link";
 
+import { CookiePreferencesButton } from "@/components/analytics/CookiePreferencesButton";
+import { Container } from "@/components/ui/Container";
 import { business } from "@/config/business";
 import { footerNavigation } from "@/config/navigation";
 import type { Locale } from "@/lib/i18n/config";
-import { Container } from "@/components/ui/Container";
 
 type FooterProps = {
   locale: Locale;
@@ -50,7 +51,9 @@ export function Footer({ locale }: FooterProps) {
             <div className="mt-7 space-y-3 text-sm text-charcoal-300">
               <p>
                 <span className="font-semibold text-white">
-                  {isEnglish ? "Service Area:" : "Área de Servicio:"}
+                  {isEnglish
+                    ? "Service Area:"
+                    : "Área de Servicio:"}
                 </span>{" "}
                 San Antonio, TX
               </p>
@@ -146,7 +149,7 @@ export function Footer({ locale }: FooterProps) {
         </div>
 
         <div className="mt-12 border-t border-white/10 pt-6">
-          <div className="flex flex-col gap-3 text-xs leading-6 text-charcoal-400 sm:flex-row sm:items-center sm:justify-between">
+          <div className="flex flex-col gap-4 text-xs leading-6 text-charcoal-400 sm:flex-row sm:items-center sm:justify-between">
             <p>
               © {currentYear} {business.businessName}.{" "}
               {isEnglish
@@ -154,11 +157,18 @@ export function Footer({ locale }: FooterProps) {
                 : "Todos los derechos reservados."}
             </p>
 
-            <p>
-              {isEnglish
-                ? "Serving homeowners in the San Antonio, Texas area."
-                : "Atendiendo a propietarios en el área de San Antonio, Texas."}
-            </p>
+            <div className="flex flex-col gap-2 sm:items-end">
+              <p>
+                {isEnglish
+                  ? "Serving homeowners in the San Antonio, Texas area."
+                  : "Atendiendo a propietarios en el área de San Antonio, Texas."}
+              </p>
+
+              <CookiePreferencesButton
+                locale={locale}
+                className="w-fit text-xs font-semibold text-charcoal-300 underline decoration-charcoal-600 underline-offset-4 transition-colors hover:text-white focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-white/30"
+              />
+            </div>
           </div>
         </div>
       </Container>
