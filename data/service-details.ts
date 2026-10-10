@@ -25,7 +25,7 @@ export const serviceDetails = [
 
     en: {
       seoTitle:
-        "Kitchen Remodeling San Antonio TX | Alamo Rise Home Solutions",
+        "Kitchen Remodeling San Antonio TX | Alamo Rise",
 
       seoDescription:
         "Kitchen remodeling in San Antonio, TX for homeowners looking to improve layout, storage, finishes and everyday functionality.",
@@ -111,7 +111,7 @@ export const serviceDetails = [
 
     en: {
       seoTitle:
-        "Bathroom Remodeling San Antonio TX | Alamo Rise Home Solutions",
+        "Bathroom Remodeling San Antonio TX | Alamo Rise",
 
       seoDescription:
         "Bathroom remodeling in San Antonio, TX focused on improving functionality, finishes, storage and the overall use of the space.",
@@ -197,7 +197,7 @@ export const serviceDetails = [
 
     en: {
       seoTitle:
-        "Interior Remodeling San Antonio TX | Alamo Rise Home Solutions",
+        "Interior Remodeling San Antonio TX | Alamo Rise",
 
       seoDescription:
         "Interior remodeling services in San Antonio, TX for living rooms, bedrooms and other residential spaces that need functional or visual improvements.",
@@ -283,7 +283,7 @@ export const serviceDetails = [
 
     en: {
       seoTitle:
-        "Flooring Installation San Antonio TX | Alamo Rise Home Solutions",
+        "Flooring Installation San Antonio TX | Alamo Rise",
 
       seoDescription:
         "Residential flooring improvements in San Antonio, TX for homeowners replacing worn, damaged or outdated floors.",
@@ -369,7 +369,7 @@ export const serviceDetails = [
 
     en: {
       seoTitle:
-        "Drywall Repair San Antonio TX | Alamo Rise Home Solutions",
+        "Drywall Repair San Antonio TX | Alamo Rise",
 
       seoDescription:
         "Residential drywall repair and improvement services in San Antonio, TX for damaged walls, renovations and interior updates.",
@@ -541,7 +541,7 @@ export const serviceDetails = [
 
     en: {
       seoTitle:
-        "Residential Siding San Antonio TX | Alamo Rise Home Solutions",
+        "Residential Siding San Antonio TX | Alamo Rise",
 
       seoDescription:
         "Residential siding improvements in San Antonio, TX for homeowners updating damaged, worn or outdated exterior surfaces.",
@@ -627,7 +627,7 @@ export const serviceDetails = [
 
     en: {
       seoTitle:
-        "Windows & Doors San Antonio TX | Alamo Rise Home Solutions",
+        "Windows & Doors San Antonio TX | Alamo Rise",
 
       seoDescription:
         "Residential window and door improvements in San Antonio, TX for homeowners updating appearance, operation and everyday usability.",
@@ -799,7 +799,7 @@ export const serviceDetails = [
 
     en: {
       seoTitle:
-        "Pergolas San Antonio TX | Alamo Rise Home Solutions",
+        "Pergolas San Antonio TX | Alamo Rise",
 
       seoDescription:
         "Residential pergola projects in San Antonio, TX for homeowners looking to add structure, visual interest and usable shade to outdoor areas.",
@@ -840,7 +840,7 @@ export const serviceDetails = [
 
     es: {
       seoTitle:
-        "Pérgolas en San Antonio TX | Alamo Rise Home Solutions",
+        "Pérgolas en San Antonio TX | Alamo Rise",
 
       seoDescription:
         "Proyectos residenciales de pérgolas en San Antonio, TX para agregar estructura, atractivo visual y sombra a espacios exteriores.",
