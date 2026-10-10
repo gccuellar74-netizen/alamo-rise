@@ -43,7 +43,9 @@ export async function generateMetadata({
 
     openGraph: {
       type: "website",
-      title: content.seo.title,
+      title: {
+      absolute: content.seo.title,
+            },
       description: content.seo.description,
       url: routes.en.services,
       locale: "en_US",
