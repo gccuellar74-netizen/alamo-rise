@@ -28,7 +28,9 @@ export async function generateMetadata({
   const content = await getDictionary("en", "services");
 
   return {
-    title: content.seo.title,
+   title: {
+      absolute: content.seo.title,
+          },
     description: content.seo.description,
 
     alternates: {
