@@ -16,42 +16,62 @@ const content = {
     eyebrow: "Legal",
     title: "Terms of Use",
     intro:
-      "These Terms of Use explain the conditions for using the Alamo Rise Home Solutions website.",
+      "These Terms of Use explain the conditions for accessing and using the Alamo Rise Home Solutions website.",
     sections: [
       {
         title: "Website Use",
         body:
-          "This website is provided for general information about residential remodeling and home improvement services. You agree to use the website only for lawful purposes.",
+          "This website is provided to share general information about residential remodeling and home improvement services. You agree to use the website only for lawful purposes and in a manner that does not interfere with the operation, security or accessibility of the site.",
       },
       {
-        title: "Estimates and Project Information",
+        title: "Estimate Requests and Project Information",
         body:
-          "Information submitted through the website does not create a construction contract, guarantee pricing or confirm project acceptance. Project scope, pricing, scheduling and other terms must be confirmed separately.",
+          "Submitting an estimate request, contact form or other information through this website does not create a construction contract, guarantee pricing, reserve a project date or confirm acceptance of a project. Project scope, pricing, scheduling, materials, payment terms and other conditions must be confirmed separately in writing when applicable.",
+      },
+      {
+        title: "Website Forms and Communications",
+        body:
+          "When you submit information through this website, you authorize Alamo Rise Home Solutions to use the contact information you provide to respond to your request and communicate with you about the project or service you requested. Submission of a form does not require you to purchase a service.",
       },
       {
         title: "Website Content",
         body:
-          "Descriptions, images, examples and other content are provided for informational purposes and may be updated or changed without notice.",
+          "Service descriptions, photographs, project examples, illustrations, pricing references and other website content are provided for general informational purposes. Actual project conditions, materials, appearance, availability and results may vary. Website content may be updated, replaced or removed without prior notice.",
       },
       {
-        title: "Third-Party Services",
+        title: "Analytics, Cookies and Advertising Technologies",
         body:
-          "The website may use or link to third-party services such as analytics, advertising, maps, financing providers or social platforms. Those services may have their own terms and privacy policies.",
+          "The website may use Google Tag Manager, Google Analytics and related measurement or advertising technologies. Optional analytics and advertising storage is managed according to the cookie preferences selected by the visitor. Additional information about these practices is available in the Privacy Policy.",
       },
       {
-        title: "Availability",
+        title: "Third-Party Services and Links",
         body:
-          "Website access may occasionally be interrupted, delayed or unavailable because of maintenance, technical issues or circumstances outside the control of Alamo Rise Home Solutions.",
+          "The website may use or link to third-party services for hosting, analytics, advertising measurement, databases, maps, social platforms, financing information or other website functions. Alamo Rise Home Solutions does not control the content, availability, privacy practices or terms of independent third-party services.",
       },
       {
-        title: "Limitation of Website Information",
+        title: "Financing Information",
         body:
-          "Website content should not be treated as a substitute for a written project agreement, professional inspection, engineering review or other project-specific documentation when those are required.",
+          "Any financing information displayed or linked through the website is provided for informational purposes only unless otherwise stated. Financing availability, approval, rates, terms and eligibility may depend on a third-party provider and are not guaranteed by submitting information through this website.",
+      },
+      {
+        title: "Availability and Technical Issues",
+        body:
+          "Website access may occasionally be interrupted, delayed or unavailable because of maintenance, technical problems, network conditions, third-party services or circumstances outside the reasonable control of Alamo Rise Home Solutions.",
+      },
+      {
+        title: "Project-Specific Information",
+        body:
+          "Website content should not be treated as a substitute for a written project agreement, on-site evaluation, professional inspection, engineering review, permit requirements or other project-specific documentation when those are required.",
+      },
+      {
+        title: "Privacy",
+        body:
+          "Information submitted through the website is handled according to the Privacy Policy. The Privacy Policy also explains the website's use of analytics technologies, cookies and consent preferences.",
       },
       {
         title: "Changes to These Terms",
         body:
-          "These Terms of Use may be updated as the website, services or business practices change. The current version will be published on this page.",
+          "These Terms of Use may be updated as the website, services, technologies or business practices change. The current version will be published on this page.",
       },
     ],
     backHome: "Return Home",
@@ -62,42 +82,62 @@ const content = {
     eyebrow: "Legal",
     title: "Términos de Uso",
     intro:
-      "Estos Términos de Uso explican las condiciones para utilizar el sitio web de Alamo Rise Home Solutions.",
+      "Estos Términos de Uso explican las condiciones para acceder y utilizar el sitio web de Alamo Rise Home Solutions.",
     sections: [
       {
         title: "Uso del Sitio Web",
         body:
-          "Este sitio se proporciona para ofrecer información general sobre servicios de remodelación residencial y mejoras para el hogar. Aceptas utilizar el sitio únicamente para fines legales.",
+          "Este sitio se proporciona para compartir información general sobre servicios de remodelación residencial y mejoras para el hogar. Aceptas utilizar el sitio únicamente para fines legales y de una manera que no interfiera con su funcionamiento, seguridad o accesibilidad.",
       },
       {
-        title: "Cotizaciones e Información del Proyecto",
+        title: "Solicitudes de Cotización e Información del Proyecto",
         body:
-          "La información enviada a través del sitio no crea un contrato de construcción, no garantiza precios ni confirma la aceptación de un proyecto. El alcance, precio, calendario y demás condiciones deben confirmarse por separado.",
+          "Enviar una solicitud de cotización, formulario de contacto u otra información a través de este sitio no crea un contrato de construcción, no garantiza precios, no reserva una fecha de proyecto ni confirma la aceptación de un proyecto. El alcance, precio, calendario, materiales, condiciones de pago y demás términos deberán confirmarse por separado y por escrito cuando corresponda.",
+      },
+      {
+        title: "Formularios y Comunicaciones",
+        body:
+          "Cuando envías información a través de este sitio, autorizas a Alamo Rise Home Solutions a utilizar los datos de contacto proporcionados para responder a tu solicitud y comunicarse contigo sobre el proyecto o servicio solicitado. El envío de un formulario no te obliga a contratar un servicio.",
       },
       {
         title: "Contenido del Sitio",
         body:
-          "Las descripciones, imágenes, ejemplos y demás contenido se proporcionan con fines informativos y pueden actualizarse o modificarse sin previo aviso.",
+          "Las descripciones de servicios, fotografías, ejemplos de proyectos, ilustraciones, referencias de precios y demás contenido del sitio se proporcionan con fines informativos generales. Las condiciones reales del proyecto, materiales, apariencia, disponibilidad y resultados pueden variar. El contenido puede actualizarse, reemplazarse o eliminarse sin previo aviso.",
       },
       {
-        title: "Servicios de Terceros",
+        title: "Analítica, Cookies y Tecnologías Publicitarias",
         body:
-          "El sitio puede utilizar o enlazar servicios de terceros como analítica, publicidad, mapas, proveedores de financiamiento o plataformas sociales. Estos servicios pueden tener sus propios términos y políticas de privacidad.",
+          "El sitio puede utilizar Google Tag Manager, Google Analytics y tecnologías relacionadas de medición o publicidad. El almacenamiento opcional de analítica y publicidad se administra de acuerdo con las preferencias de cookies seleccionadas por el visitante. Puedes encontrar información adicional sobre estas prácticas en la Política de Privacidad.",
       },
       {
-        title: "Disponibilidad",
+        title: "Servicios y Enlaces de Terceros",
         body:
-          "El acceso al sitio puede interrumpirse, retrasarse o no estar disponible temporalmente debido a mantenimiento, problemas técnicos u otras circunstancias fuera del control de Alamo Rise Home Solutions.",
+          "El sitio puede utilizar o enlazar servicios de terceros para alojamiento, analítica, medición de publicidad, bases de datos, mapas, plataformas sociales, información de financiamiento u otras funciones del sitio. Alamo Rise Home Solutions no controla el contenido, disponibilidad, prácticas de privacidad o términos de servicios independientes de terceros.",
       },
       {
-        title: "Limitaciones de la Información del Sitio",
+        title: "Información de Financiamiento",
         body:
-          "El contenido del sitio no debe considerarse un sustituto de un contrato escrito, inspección profesional, revisión de ingeniería u otra documentación específica del proyecto cuando sea necesaria.",
+          "Cualquier información de financiamiento mostrada o enlazada desde el sitio se proporciona únicamente con fines informativos, salvo que se indique lo contrario. La disponibilidad, aprobación, tasas, términos y elegibilidad pueden depender de un proveedor externo y no están garantizadas por enviar información a través de este sitio.",
+      },
+      {
+        title: "Disponibilidad y Problemas Técnicos",
+        body:
+          "El acceso al sitio puede interrumpirse, retrasarse o no estar disponible temporalmente debido a mantenimiento, problemas técnicos, condiciones de red, servicios de terceros u otras circunstancias fuera del control razonable de Alamo Rise Home Solutions.",
+      },
+      {
+        title: "Información Específica del Proyecto",
+        body:
+          "El contenido del sitio no debe considerarse un sustituto de un contrato escrito, evaluación en el lugar, inspección profesional, revisión de ingeniería, requisitos de permisos u otra documentación específica del proyecto cuando sea necesaria.",
+      },
+      {
+        title: "Privacidad",
+        body:
+          "La información enviada a través del sitio se maneja de acuerdo con la Política de Privacidad. La Política de Privacidad también explica el uso de tecnologías de analítica, cookies y preferencias de consentimiento.",
       },
       {
         title: "Cambios a Estos Términos",
         body:
-          "Estos Términos de Uso pueden actualizarse conforme cambien el sitio web, los servicios o las prácticas del negocio. La versión vigente se publicará en esta página.",
+          "Estos Términos de Uso pueden actualizarse conforme cambien el sitio web, los servicios, las tecnologías o las prácticas del negocio. La versión vigente se publicará en esta página.",
       },
     ],
     backHome: "Volver al Inicio",
