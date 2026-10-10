@@ -52,7 +52,7 @@ export const common = {
 
     placeholders: {
       name: "Tu nombre",
-      phone: "(210) 555-1234",
+      phone: "",
       email: "tu@ejemplo.com",
       zipCode: "78201",
       projectType: "Selecciona un tipo de proyecto",
