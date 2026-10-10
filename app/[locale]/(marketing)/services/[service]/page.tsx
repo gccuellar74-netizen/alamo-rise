@@ -57,7 +57,10 @@ export async function generateMetadata({
   const seo = detail.en;
 
   return {
-    title: seo.seoTitle,
+    title: {
+      absolute: seo.seoTitle,
+    },
+
     description: seo.seoDescription,
 
     alternates: {
