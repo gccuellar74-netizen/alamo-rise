@@ -18,12 +18,17 @@ type GraciasPageProps = {
 };
 
 export const metadata: Metadata = {
-  title: "Gracias",
+  title: {
+    absolute: "Gracias | Alamo Rise Home Solutions",
+  },
   description:
     "Gracias por contactar a Alamo Rise Home Solutions sobre tu proyecto de remodelación o mejoras para el hogar.",
   robots: {
     index: false,
     follow: false,
+  },
+  alternates: {
+    canonical: routes.es.thankYou,
   },
 };
 
