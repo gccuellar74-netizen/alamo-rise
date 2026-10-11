@@ -1,1 +1,4 @@
-export { default } from "../privacy/page";
+export {
+  default,
+  generateMetadata,
+} from "../privacy/page";
