@@ -107,7 +107,7 @@ export const reviewsPage = {
       "Reseñas de Clientes | Alamo Rise Home Solutions San Antonio TX",
 
     description:
-      "Lee reseñas y opiniones verificadas de clientes de Alamo Rise Home Solutions en el área de San Antonio, Texas.",
+      "Lee reseñas y opiniones de clientes de Alamo Rise Home Solutions en el área de San Antonio, Texas.",
   },
 } as const;
 
