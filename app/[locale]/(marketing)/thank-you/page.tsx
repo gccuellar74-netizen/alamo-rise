@@ -18,12 +18,17 @@ type ThankYouPageProps = {
 };
 
 export const metadata: Metadata = {
-  title: "Thank You",
+  title: {
+    absolute: "Thank You | Alamo Rise Home Solutions",
+  },
   description:
     "Thank you for contacting Alamo Rise Home Solutions about your remodeling or home improvement project.",
   robots: {
     index: false,
     follow: false,
+  },
+  alternates: {
+    canonical: routes.en.thankYou,
   },
 };
 
