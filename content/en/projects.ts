@@ -109,7 +109,7 @@ export const projectsPage = {
       "Home Remodeling Projects San Antonio TX | Alamo Rise Home Solutions",
 
     description:
-      "Explore verified residential remodeling and home improvement projects from Alamo Rise Home Solutions in the San Antonio, Texas area.",
+      "Explore residential remodeling and home improvement projects from Alamo Rise Home Solutions in the San Antonio, Texas area."
   },
 } as const;
 
