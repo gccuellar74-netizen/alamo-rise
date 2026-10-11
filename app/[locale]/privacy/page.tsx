@@ -1,3 +1,4 @@
+import type { Metadata } from "next";
 import Link from "next/link";
 import { notFound } from "next/navigation";
 
@@ -137,7 +138,58 @@ const content = {
     contact: string;
   }
 >;
+export async function generateMetadata({
+  params,
+}: PrivacyPageProps): Promise<Metadata> {
+  const { locale: localeParam } = await params;
 
+  if (!isLocale(localeParam)) {
+    return {};
+  }
+
+  const isEnglish = localeParam === "en";
+
+  const title = isEnglish
+    ? "Privacy Policy | Alamo Rise Home Solutions"
+    : "Política de Privacidad | Alamo Rise Home Solutions";
+
+  const description = isEnglish
+    ? "Read the Privacy Policy for Alamo Rise Home Solutions and learn how website information, analytics, cookies and submitted data may be handled."
+    : "Consulta la Política de Privacidad de Alamo Rise Home Solutions y conoce cómo pueden manejarse la información enviada, las cookies y las tecnologías de analítica.";
+
+  const canonical = isEnglish
+    ? routes.en.privacy
+    : routes.es.privacy;
+
+  return {
+    title: {
+      absolute: title,
+    },
+
+    description,
+
+    alternates: {
+      canonical,
+
+      languages: {
+        "en-US": routes.en.privacy,
+        "es-US": routes.es.privacy,
+        "x-default": routes.en.privacy,
+      },
+    },
+
+    openGraph: {
+      type: "website",
+      title,
+      description,
+      url: canonical,
+      locale: isEnglish ? "en_US" : "es_US",
+      alternateLocale: [
+        isEnglish ? "es_US" : "en_US",
+      ],
+    },
+  };
+}
 export default async function PrivacyPage({
   params,
 }: PrivacyPageProps) {
