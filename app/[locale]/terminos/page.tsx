@@ -1,2 +1,4 @@
-
-export { default } from "../terms/page";
+export {
+  default,
+  generateMetadata,
+} from "../terms/page";
