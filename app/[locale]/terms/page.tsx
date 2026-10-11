@@ -1,3 +1,4 @@
+import type { Metadata } from "next";
 import Link from "next/link";
 import { notFound } from "next/navigation";
 
@@ -157,7 +158,58 @@ const content = {
     contact: string;
   }
 >;
+export async function generateMetadata({
+  params,
+}: TermsPageProps): Promise<Metadata> {
+  const { locale: localeParam } = await params;
 
+  if (!isLocale(localeParam)) {
+    return {};
+  }
+
+  const isEnglish = localeParam === "en";
+
+  const title = isEnglish
+    ? "Terms of Use | Alamo Rise Home Solutions"
+    : "Términos de Uso | Alamo Rise Home Solutions";
+
+  const description = isEnglish
+    ? "Read the Terms of Use for the Alamo Rise Home Solutions website, including information about estimates, website use, communications and third-party services."
+    : "Consulta los Términos de Uso del sitio web de Alamo Rise Home Solutions, incluyendo información sobre cotizaciones, uso del sitio, comunicaciones y servicios de terceros.";
+
+  const canonical = isEnglish
+    ? routes.en.terms
+    : routes.es.terms;
+
+  return {
+    title: {
+      absolute: title,
+    },
+
+    description,
+
+    alternates: {
+      canonical,
+
+      languages: {
+        "en-US": routes.en.terms,
+        "es-US": routes.es.terms,
+        "x-default": routes.en.terms,
+      },
+    },
+
+    openGraph: {
+      type: "website",
+      title,
+      description,
+      url: canonical,
+      locale: isEnglish ? "en_US" : "es_US",
+      alternateLocale: [
+        isEnglish ? "es_US" : "en_US",
+      ],
+    },
+  };
+}
 export default async function TermsPage({
   params,
 }: TermsPageProps) {
