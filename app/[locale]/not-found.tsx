@@ -1,7 +1,21 @@
+
+import type { Metadata } from "next";
 import Link from "next/link";
 import { ArrowLeft, Home } from "lucide-react";
 
 import { Container } from "@/components/ui/Container";
+
+export const metadata: Metadata = {
+  title: {
+    absolute: "Page Not Found | Alamo Rise Home Solutions",
+  },
+  description:
+    "The requested page could not be found on the Alamo Rise Home Solutions website.",
+  robots: {
+    index: false,
+    follow: false,
+  },
+};
 
 export default function NotFound() {
   return (
