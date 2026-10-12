@@ -174,46 +174,46 @@ export const home = {
       "IMÁGENES PLACEHOLDER: Reemplazar con fotografías verificadas de proyectos de Alamo Rise antes de producción.",
   },
 
-  featuredProjects: {
-    eyebrow: "Proyectos Destacados",
+    featuredProjects: {
+    eyebrow: "Ideas de Remodelación",
 
-    title: "Proyectos Reales. Mejoras Que Hacen la Diferencia.",
+    title: "Inspírate Para Tu Próximo Proyecto.",
 
     description:
-      "Explora ideas de remodelación y ejemplos de los tipos de proyectos residenciales que Alamo Rise puede ayudar a coordinar.",
+      "Explora ejemplos visuales de cocinas, baños y espacios exteriores para conocer algunos de los tipos de mejoras que puedes considerar para tu hogar.",
 
     projects: [
       {
-        key: "kitchen-renovation-alamo-heights",
-        title: "Renovación de Cocina",
-        location: "Alamo Heights, TX",
+        key: "kitchen-remodeling-inspiration",
+        title: "Inspiración para Cocina",
+        location: "Referencia Visual",
         description:
-          "Una renovación de cocina enfocada en mejorar la distribución, los acabados y la funcionalidad diaria.",
-       image: "/images/kitchen-1.png",
+          "Ideas para mejorar la distribución, los acabados, el almacenamiento y la funcionalidad diaria de una cocina.",
+        image: "/images/kitchen-1.png",
         verified: false,
       },
       {
-        key: "bathroom-remodel-stone-oak",
-        title: "Remodelación de Baño",
-        location: "Stone Oak, TX",
+        key: "bathroom-remodeling-inspiration",
+        title: "Inspiración para Baño",
+        location: "Referencia Visual",
         description:
-          "Una actualización de baño enfocada en una distribución más limpia, mejores acabados y mayor comodidad.",
+          "Ideas de remodelación enfocadas en distribución, acabados, almacenamiento y comodidad.",
         image: "/images/bathroom2.png",
         verified: false,
       },
       {
-        key: "patio-upgrade-san-antonio",
-        title: "Mejora de Patio",
-        location: "San Antonio, TX",
+        key: "patio-remodeling-inspiration",
+        title: "Inspiración para Patio",
+        location: "Referencia Visual",
         description:
-          "Un proyecto exterior diseñado para crear un espacio más funcional, cómodo y agradable.",
+          "Ideas para crear un espacio exterior más funcional, cómodo y atractivo para el hogar.",
         image: "/images/patio2.png",
         verified: false,
       },
     ],
 
     placeholderNotice:
-      "",
+      "Las imágenes mostradas son referencias visuales y no representan necesariamente proyectos realizados por Alamo Rise Home Solutions.",
 
     cta: "Ver Proyectos",
   },
