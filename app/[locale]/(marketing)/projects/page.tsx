@@ -25,16 +25,17 @@ export async function generateMetadata({
     return {};
   }
 
-  const content = await getDictionary(
-    "en",
-    "projects",
-  );
+  const content = await getDictionary("en", "projects");
+
+  const description =
+    "Learn about the types of residential remodeling projects Alamo Rise Home Solutions can help coordinate in San Antonio, Texas, and view the gallery as verified projects are added.";
 
   return {
-        title: {
-  absolute: content.seo.title,
-          },
-    description: content.seo.description,
+    title: {
+      absolute: content.seo.title,
+    },
+
+    description,
 
     alternates: {
       canonical: routes.en.projects,
@@ -49,10 +50,23 @@ export async function generateMetadata({
     openGraph: {
       type: "website",
       title: content.seo.title,
-      description: content.seo.description,
+      description,
       url: routes.en.projects,
       locale: "en_US",
       alternateLocale: ["es_US"],
+      images: [
+        {
+          url: "/images/social/alamo-rise-og-image.jpg",
+          alt: "Alamo Rise Home Solutions",
+        },
+      ],
+    },
+
+    twitter: {
+      card: "summary_large_image",
+      title: content.seo.title,
+      description,
+      images: ["/images/social/alamo-rise-og-image.jpg"],
     },
   };
 }
@@ -70,10 +84,7 @@ export default async function ProjectsRoute({
     redirect(routes.es.projects);
   }
 
-  const content = await getDictionary(
-    "en",
-    "projects",
-  );
+  const content = await getDictionary("en", "projects");
 
   return (
     <ProjectsPage
