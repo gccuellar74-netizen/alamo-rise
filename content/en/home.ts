@@ -172,49 +172,49 @@ export const home = {
       "",
   },
 
-  featuredProjects: {
-    eyebrow: "Featured Projects",
+ featuredProjects: {
+  eyebrow: "Project Examples",
 
-    title: "Real Projects. Practical Improvements.",
+  title: "Examples of Project Types We Can Help Coordinate",
 
-    description:
-      "Explore remodeling ideas and examples of the types of residential projects Alamo Rise can help coordinate.",
+  description:
+    "These examples show the types of residential remodeling and improvement projects Alamo Rise Home Solutions may help coordinate. They are not presented as verified completed projects by Alamo Rise.",
 
-    projects: [
-      {
-        key: "kitchen-renovation-alamo-heights",
-        title: "Kitchen Renovation",
-        location: "Alamo Heights, TX",
-        description:
-          "A kitchen-focused renovation designed to improve layout, finishes and everyday functionality.",
-        image: "/images/kitchen-1.png",
-        verified: false,
-      },
-      {
-        key: "bathroom-remodel-stone-oak",
-        title: "Bathroom Remodel",
-        location: "Stone Oak, TX",
-        description:
-          "A bathroom update focused on a cleaner layout, refreshed finishes and improved usability.",
-        image: "/images/bathroom2.png",
-        verified: false,
-      },
-      {
-        key: "patio-upgrade-san-antonio",
-        title: "Patio Upgrade",
-        location: "San Antonio, TX",
-        description:
-          "An outdoor improvement project designed to create a more useful and comfortable space.",
-        image: "/images/patio2.png",
-        verified: false,
-      },
-    ],
+  projects: [
+    {
+      key: "kitchen-project-example",
+      title: "Kitchen Remodeling Example",
+      location: "Example Project",
+      description:
+        "An example of the type of kitchen remodeling project that may focus on layout, finishes, storage and everyday functionality.",
+      image: "/images/kitchen-1.png",
+      verified: false,
+    },
+    {
+      key: "bathroom-project-example",
+      title: "Bathroom Remodeling Example",
+      location: "Example Project",
+      description:
+        "An example of the type of bathroom remodeling project that may focus on usability, updated finishes and better space use.",
+      image: "/images/bathroom2.png",
+      verified: false,
+    },
+    {
+      key: "patio-project-example",
+      title: "Patio Improvement Example",
+      location: "Example Project",
+      description:
+        "An example of the type of outdoor improvement project that may help create a more useful and comfortable patio area.",
+      image: "/images/patio2.png",
+      verified: false,
+    },
+  ],
 
-    placeholderNotice:
-      "",
+  placeholderNotice:
+    "These images are being used as project examples only and are not presented as verified completed projects by Alamo Rise Home Solutions.",
 
-    cta: "View Projects",
-  },
+  cta: "View Projects",
+},
 
   whyChooseUs: {
     eyebrow: "Why Choose Alamo Rise",
