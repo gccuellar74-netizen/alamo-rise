@@ -10,29 +10,54 @@ type CookieConsentBannerProps = {
 
 const STORAGE_KEY = "alamo-rise-cookie-consent";
 
+type GoogleConsentState = "granted" | "denied";
+
+type GoogleTagFunction = (
+  command: "consent",
+  action: "update",
+  parameters: {
+    ad_storage: GoogleConsentState;
+    analytics_storage: GoogleConsentState;
+    ad_user_data: GoogleConsentState;
+    ad_personalization: GoogleConsentState;
+  },
+) => void;
+
 function updateGoogleConsent(choice: ConsentChoice) {
   if (typeof window === "undefined") {
     return;
   }
 
+  const granted: GoogleConsentState =
+    choice === "accepted"
+      ? "granted"
+      : "denied";
+
+  const googleWindow = window as typeof window & {
+    gtag?: GoogleTagFunction;
+  };
+
+  /*
+   * Update Google Consent Mode FIRST.
+   * GoogleConsentMode.tsx creates window.gtag
+   * before GTM loads.
+   */
+  googleWindow.gtag?.("consent", "update", {
+    ad_storage: granted,
+    analytics_storage: granted,
+    ad_user_data: granted,
+    ad_personalization: granted,
+  });
+
+  /*
+   * Push our custom event AFTER the Google
+   * consent state has been updated.
+   */
   window.dataLayer = window.dataLayer || [];
 
   window.dataLayer.push({
     event: "consent_update",
     consent_choice: choice,
-  });
-
-  const granted = choice === "accepted" ? "granted" : "denied";
-
-  function gtag(...args: unknown[]) {
-    window.dataLayer?.push(args as never);
-  }
-
-  gtag("consent", "update", {
-    ad_storage: granted,
-    analytics_storage: granted,
-    ad_user_data: granted,
-    ad_personalization: granted,
   });
 }
 
@@ -61,7 +86,10 @@ export function CookieConsentBanner({
   }, []);
 
   function handleChoice(choice: ConsentChoice) {
-    window.localStorage.setItem(STORAGE_KEY, choice);
+    window.localStorage.setItem(
+      STORAGE_KEY,
+      choice,
+    );
 
     updateGoogleConsent(choice);
 
@@ -105,7 +133,9 @@ export function CookieConsentBanner({
         <div className="flex flex-col gap-2 sm:flex-row">
           <button
             type="button"
-            onClick={() => handleChoice("rejected")}
+            onClick={() =>
+              handleChoice("rejected")
+            }
             className="min-h-11 rounded-md border border-charcoal-300 bg-white px-5 py-2.5 text-sm font-semibold text-charcoal-950 transition-colors hover:bg-charcoal-50"
           >
             {copy.reject}
@@ -113,7 +143,9 @@ export function CookieConsentBanner({
 
           <button
             type="button"
-            onClick={() => handleChoice("accepted")}
+            onClick={() =>
+              handleChoice("accepted")
+            }
             className="min-h-11 rounded-md bg-brand-600 px-5 py-2.5 text-sm font-semibold text-white transition-colors hover:bg-brand-700"
           >
             {copy.accept}
