@@ -1,6 +1,6 @@
 import Image from "next/image";
 import Link from "next/link";
-
+import { TrackedButton } from "@/components/analytics/TrackedButton";
 import { business } from "@/config/business";
 import { routes } from "@/config/routes";
 import { Container } from "@/components/ui/Container";
@@ -8,6 +8,7 @@ import { DesktopNav } from "@/components/layout/DesktopNav";
 import { MobileNav } from "@/components/layout/MobileNav";
 import { LanguageSwitcher } from "@/components/layout/LanguageSwitcher";
 import type { Locale } from "@/lib/i18n/config";
+
 
 type HeaderProps = {
   locale: Locale;
@@ -65,12 +66,19 @@ export function Header({ locale }: HeaderProps) {
               </a>
             ) : null}
 
-            <Link
+            <TrackedButton
               href={estimateUrl}
-              className="inline-flex min-h-11 items-center justify-center rounded-md bg-brand-600 px-5 py-2 text-sm font-semibold text-white shadow-sm transition-colors hover:bg-brand-700 active:bg-brand-800 focus-visible:outline-none focus-visible:ring-4 focus-visible:ring-brand-600/20"
+              eventName="click_estimate"
+              eventData={{
+                location: "header",
+                locale,
+              }}
+              variant="primary"
+              size="sm"
             >
               {estimateLabel}
-            </Link>
+            </TrackedButton>
+            
           </div>
 
           <div className="flex items-center gap-2 lg:hidden">
