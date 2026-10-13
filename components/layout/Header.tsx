@@ -24,8 +24,8 @@ export function Header({ locale }: HeaderProps) {
     : `${routes.es.contact}#cotizacion`;
 
   const estimateLabel = isEnglish
-    ? "Get a Free Estimate"
-    : "Solicita una Cotización Gratis";
+    ? "Request an Estimate"
+    : "Solicita una Cotización";
 
   const phoneHref = business.phone
     ? `tel:${business.phone.replace(/[^\d+]/g, "")}`

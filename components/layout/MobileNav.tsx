@@ -128,8 +128,8 @@ export function MobileNav({ locale }: MobileNavProps) {
                   className="inline-flex min-h-12 w-full items-center justify-center rounded-md bg-brand-600 px-5 py-3 text-center text-base font-semibold text-white shadow-sm transition-colors hover:bg-brand-700 active:bg-brand-800 focus-visible:outline-none focus-visible:ring-4 focus-visible:ring-brand-600/20"
                 >
                   {isEnglish
-                    ? "Get a Free Estimate"
-                    : "Solicita una Cotización Gratis"}
+                    ? "Request an Estimate"
+                    : "Solicita una Cotización"}
                 </Link>
               </div>
             </div>

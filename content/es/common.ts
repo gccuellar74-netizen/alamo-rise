@@ -4,7 +4,7 @@ export const common = {
   languageName: "Español",
 
   actions: {
-    getFreeEstimate: "Solicita una Cotización Gratis",
+    getFreeEstimate: "Solicita una Cotización",
     callNow: "Llámanos",
     learnMore: "Conoce Más",
     viewAllServices: "Ver Todos los Servicios",
@@ -33,7 +33,7 @@ export const common = {
     insured: "Asegurados",
     workmanshipWarranty: "Garantía de Mano de Obra",
     financingAvailable: "Financiamiento Disponible",
-    freeEstimates: "Cotizaciones Gratis",
+    freeEstimates: "Cotizaciones",
   },
 
   forms: {

@@ -97,7 +97,7 @@ export const reviewsPage = {
     description:
       "Comparte algunos detalles sobre tu proyecto de remodelación o mejora para el hogar y comienza la conversación con Alamo Rise Home Solutions.",
 
-    primaryCta: "Solicita una Cotización Gratis",
+    primaryCta: "Solicita una Cotización",
 
     secondaryCta: "Explorar Servicios",
   },

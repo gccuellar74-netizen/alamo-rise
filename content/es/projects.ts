@@ -102,7 +102,7 @@ export const projectsPage = {
     description:
       "Cuéntanos qué quieres mejorar y comparte algunos detalles sobre tu propiedad para comenzar la conversación.",
 
-    primaryCta: "Solicita una Cotización Gratis",
+    primaryCta: "Solicita una Cotización",
 
     secondaryCta: "Explorar Servicios",
   },

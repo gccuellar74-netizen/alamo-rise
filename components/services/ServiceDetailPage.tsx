@@ -503,8 +503,8 @@ export function ServiceDetailPage({
                 className="inline-flex min-h-14 items-center justify-center gap-2 rounded-md bg-white px-6 py-3.5 text-base font-semibold text-charcoal-950 transition-colors hover:bg-charcoal-50 focus-visible:outline-none focus-visible:ring-4 focus-visible:ring-white/20"
               >
                 {isEnglish
-                  ? "Get a Free Estimate"
-                  : "Solicita una Cotización Gratis"}
+                  ? "Request an Estimate"
+                  : "Solicita una Cotización"}
 
                 <ArrowRight
                   aria-hidden="true"

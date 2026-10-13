@@ -13,7 +13,7 @@ export const seo = {
     "Home Remodeling Contractor San Antonio TX | Alamo Rise Home Solutions",
 
   defaultDescription:
-    "Professional home remodeling in San Antonio, TX. Kitchen remodeling, bathroom renovations, flooring, painting, patios and home improvements. Request a free estimate.",
+    "Professional home remodeling in San Antonio, TX. Kitchen remodeling, bathroom renovations, flooring, painting, patios and home improvements. Request an Estimate.",
 
   defaultLocale: "en_US",
   alternateLocale: "es_US",

@@ -148,7 +148,7 @@ export const aboutPage = {
     description:
       "Tell us what you want to change, repair or improve and share a few details about your property to start the conversation.",
 
-    primaryCta: "Get a Free Estimate",
+    primaryCta: "Request an Estimate",
 
     secondaryCta: "View Services",
   },

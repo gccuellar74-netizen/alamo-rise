@@ -7,7 +7,7 @@ export const home = {
     description:
       "Servicios profesionales de remodelación y mejoras para el hogar en San Antonio, Texas — desde cocinas y baños hasta pisos, pintura y espacios exteriores.",
 
-    primaryCta: "Solicita una Cotización Gratis",
+    primaryCta: "Solicita una Cotización",
     secondaryCta: "Llámanos",
 
     trustItems: {
@@ -22,7 +22,7 @@ export const home = {
       },
 
       freeEstimates: {
-        label: "Cotizaciones Gratis",
+        label: "Cotizaciones",
         verified: false,
       },
     },
@@ -415,7 +415,7 @@ export const home = {
     trustMessage:
       "Sin presión. Empieza con una conversación sobre tu proyecto, prioridades y objetivos.",
 
-    submitCta: "Solicitar Mi Cotización Gratis",
+    submitCta: "Solicitar Mi Cotización",
   },
 
   finalCta: {
@@ -424,7 +424,7 @@ export const home = {
     description:
       "Cuéntanos qué te gustaría remodelar o mejorar y comienza la conversación con Alamo Rise Home Solutions.",
 
-    primaryCta: "Solicita una Cotización Gratis",
+    primaryCta: "Solicita una Cotización",
     secondaryCta: "Llámanos",
   },
 } as const;

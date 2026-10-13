@@ -156,7 +156,7 @@ export const aboutPage = {
     description:
       "Cuéntanos qué quieres cambiar, reparar o mejorar y comparte algunos detalles de tu propiedad para comenzar la conversación.",
 
-    primaryCta: "Solicita una Cotización Gratis",
+    primaryCta: "Solicita una Cotización",
 
     secondaryCta: "Ver Servicios",
   },

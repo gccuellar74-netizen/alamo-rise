@@ -7,7 +7,7 @@ export const home = {
     description:
       "Professional home remodeling and improvement services in San Antonio, TX — from kitchens and bathrooms to flooring, painting and outdoor spaces.",
 
-    primaryCta: "Get a Free Estimate",
+    primaryCta: "Request an Estimate",
     secondaryCta: "Call Now",
 
     trustItems: {
@@ -22,7 +22,7 @@ export const home = {
       },
 
       freeEstimates: {
-        label: "Free Estimates",
+        label: "Request an Estimate",
         verified: false,
       },
     },
@@ -412,7 +412,7 @@ about: {
     trustMessage:
       "No pressure. Start with a conversation about your project, priorities and goals.",
 
-    submitCta: "Request My Free Estimate",
+    submitCta: "Request My Estimate",
   },
 
   finalCta: {
@@ -421,7 +421,7 @@ about: {
     description:
       "Tell us what you would like to remodel or improve and start the conversation with Alamo Rise Home Solutions.",
 
-    primaryCta: "Get a Free Estimate",
+    primaryCta: "Request an Estimate",
     secondaryCta: "Call Now",
   },
 } as const;

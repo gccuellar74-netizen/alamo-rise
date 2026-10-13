@@ -97,7 +97,7 @@ export const reviewsPage = {
     description:
       "Share a few details about your remodeling or home improvement project and start the conversation with Alamo Rise Home Solutions.",
 
-    primaryCta: "Get a Free Estimate",
+    primaryCta: "Request an Estimate",
 
     secondaryCta: "Explore Services",
   },

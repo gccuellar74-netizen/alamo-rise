@@ -119,7 +119,7 @@ export const serviceAreasPage = {
     description:
       "Tell us where your property is located and what you want to improve so availability can be discussed.",
 
-    primaryCta: "Get a Free Estimate",
+    primaryCta: "Request an Estimate",
 
     secondaryCta: "Explore Services",
   },

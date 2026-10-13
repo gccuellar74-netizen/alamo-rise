@@ -66,7 +66,7 @@ export async function generateMetadata({
 
   const description = isEnglish
     ? seo.defaultDescription
-    : "Servicios profesionales de remodelación en San Antonio, TX. Cocinas, baños, pisos, pintura, patios y mejoras para el hogar. Solicita una cotización gratis.";
+    : "Servicios profesionales de remodelación en San Antonio, TX. Cocinas, baños, pisos, pintura, patios y mejoras para el hogar. Solicita una cotización.";
 
   const canonicalPath = isEnglish ? "/en" : "/es";
 

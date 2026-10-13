@@ -4,7 +4,7 @@ export const common = {
   languageName: "English",
 
   actions: {
-    getFreeEstimate: "Get a Free Estimate",
+    getFreeEstimate: "Request an Estimate",
     callNow: "Call Now",
     learnMore: "Learn More",
     viewAllServices: "View All Services",
@@ -33,7 +33,7 @@ export const common = {
     insured: "Insured",
     workmanshipWarranty: "Workmanship Warranty",
     financingAvailable: "Financing Available",
-    freeEstimates: "Free Estimates",
+    freeEstimates: "Request an Estimate",
   },
 
   forms: {

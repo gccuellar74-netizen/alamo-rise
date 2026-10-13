@@ -56,8 +56,8 @@ export function MobileStickyCTA({
           className="inline-flex min-h-12 items-center justify-center rounded-md bg-brand-600 px-3 py-2 text-center text-sm font-semibold text-white shadow-sm transition-colors hover:bg-brand-700 active:bg-brand-800 focus-visible:outline-none focus-visible:ring-4 focus-visible:ring-brand-600/20"
         >
           {isEnglish
-            ? "Free Estimate"
-            : "Cotización Gratis"}
+            ? "Request an Estimate"
+            : "Solicita una Cotización"}
         </Link>
       </div>
     </div>

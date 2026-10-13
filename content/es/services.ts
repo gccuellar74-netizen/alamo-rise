@@ -7,7 +7,7 @@ export const servicesPage = {
     description:
       "Alamo Rise Home Solutions ayuda a propietarios en el área de San Antonio a mejorar cocinas, baños, interiores, pisos, pintura, espacios exteriores y otras áreas del hogar.",
 
-    primaryCta: "Solicita una Cotización Gratis",
+    primaryCta: "Solicita una Cotización",
 
     secondaryCta: "Cuéntanos Sobre Tu Proyecto",
   },
@@ -105,7 +105,7 @@ export const servicesPage = {
     description:
       "Cuéntanos qué te gustaría mejorar en tu hogar y comparte algunos detalles del proyecto para comenzar.",
 
-    primaryCta: "Solicita una Cotización Gratis",
+    primaryCta: "Solicita una Cotización",
 
     secondaryCta: "Ver Nuestros Proyectos",
   },

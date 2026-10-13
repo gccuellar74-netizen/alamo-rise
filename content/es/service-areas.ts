@@ -119,7 +119,7 @@ export const serviceAreasPage = {
     description:
       "Cuéntanos dónde se encuentra tu propiedad y qué quieres mejorar para poder conversar sobre disponibilidad.",
 
-    primaryCta: "Solicita una Cotización Gratis",
+    primaryCta: "Solicita una Cotización",
 
     secondaryCta: "Explorar Servicios",
   },
