@@ -29,6 +29,15 @@ const iconMap = {
 export function WhyChooseUs({
   content,
 }: WhyChooseUsProps) {
+
+    const visibleItems = content.items.filter(
+      (item) => !("verified" in item) || item.verified,
+    );
+
+    if (visibleItems.length === 0) {
+      return null;
+    }
+
   return (
     <section
       aria-labelledby="why-choose-us-heading"
@@ -53,7 +62,7 @@ export function WhyChooseUs({
         </div>
 
         <div className="mt-10 grid gap-5 sm:grid-cols-2 lg:mt-14 lg:grid-cols-5">
-          {content.items.map((item) => {
+          {visibleItems.map((item) => {
             const Icon =
               iconMap[
                 item.key as keyof typeof iconMap
