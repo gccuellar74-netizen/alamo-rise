@@ -105,6 +105,32 @@ for (const pair of localizedPathPairs) {
   pathLookup.set(pair.es, pair);
 }
 
+function getLocalizedServiceAreaPath(
+  pathname: string,
+  targetLocale: Locale,
+): string | null {
+  const englishPrefix = `${routes.en.serviceAreas}/`;
+  const spanishPrefix = `${routes.es.serviceAreas}/`;
+
+  if (pathname.startsWith(englishPrefix)) {
+    const slug = pathname.slice(englishPrefix.length);
+
+    return targetLocale === "en"
+      ? `${routes.en.serviceAreas}/${slug}`
+      : `${routes.es.serviceAreas}/${slug}`;
+  }
+
+  if (pathname.startsWith(spanishPrefix)) {
+    const slug = pathname.slice(spanishPrefix.length);
+
+    return targetLocale === "en"
+      ? `${routes.en.serviceAreas}/${slug}`
+      : `${routes.es.serviceAreas}/${slug}`;
+  }
+
+  return null;
+}
+
 export function getLocalizedPath(
   pathname: string,
   targetLocale: Locale,
@@ -120,16 +146,32 @@ export function getLocalizedPath(
     return pair[targetLocale];
   }
 
-  const segments = normalizedPath.split("/").filter(Boolean);
+  const localizedServiceAreaPath =
+    getLocalizedServiceAreaPath(
+      normalizedPath,
+      targetLocale,
+    );
+
+  if (localizedServiceAreaPath) {
+    return localizedServiceAreaPath;
+  }
+
+  const segments = normalizedPath
+    .split("/")
+    .filter(Boolean);
 
   if (segments.length === 0) {
-    return targetLocale === "en" ? routes.en.home : routes.es.home;
+    return targetLocale === "en"
+      ? routes.en.home
+      : routes.es.home;
   }
 
   const [, ...rest] = segments;
 
   if (rest.length === 0) {
-    return targetLocale === "en" ? routes.en.home : routes.es.home;
+    return targetLocale === "en"
+      ? routes.en.home
+      : routes.es.home;
   }
 
   return `/${targetLocale}/${rest.join("/")}`;

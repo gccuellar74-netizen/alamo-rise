@@ -134,8 +134,8 @@ export function Hero({
                   src="/images/hero.jpg"
                   alt={
                     isEnglish
-                      ? "Remodeled residential interior in San Antonio, Texas"
-                      : "Interior residencial remodelado en San Antonio, Texas"
+                      ? "Residential remodeling reference image"
+                      : "Imagen de referencia de remodelación residencial"
                   }
                   fill
                   priority

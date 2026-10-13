@@ -29,37 +29,37 @@ export const home = {
   },
 
   trustBar: {
-    items: [
-      {
-        key: "local-team",
-        title: "Equipo Local en San Antonio",
-        description:
-          "Enfocados en proyectos residenciales de remodelación y mejoras para el hogar en el área de San Antonio.",
-        verified: true,
-      },
-      {
-        key: "insured",
-        title: "Asegurados",
-        description:
-          "VERIFY: Confirmar el estatus actual del seguro antes de publicar.",
-        verified: false,
-      },
-      {
-        key: "workmanship-warranty",
-        title: "Garantía de Mano de Obra",
-        description:
-          "VERIFY: Confirmar disponibilidad y condiciones de la garantía antes de publicar.",
-        verified: false,
-      },
-      {
-        key: "financing",
-        title: "Financiamiento Disponible",
-        description:
-          "VERIFY: Confirmar disponibilidad de financiamiento y proveedor antes de publicar.",
-        verified: false,
-      },
-    ],
-  },
+  items: [
+    {
+      key: "local-focus",
+      title: "Enfocados en el Área de San Antonio",
+      description:
+        "Servicios residenciales de remodelación y mejoras para el hogar enfocados en propietarios del área de San Antonio.",
+      verified: true,
+    },
+    {
+      key: "insured",
+      title: "Asegurados",
+      description:
+        "VERIFY: Confirmar el estatus actual del seguro antes de publicar.",
+      verified: false,
+    },
+    {
+      key: "workmanship-warranty",
+      title: "Garantía de Mano de Obra",
+      description:
+        "VERIFY: Confirmar disponibilidad y condiciones de la garantía antes de publicar.",
+      verified: false,
+    },
+    {
+      key: "financing",
+      title: "Financiamiento Disponible",
+      description:
+        "VERIFY: Confirmar disponibilidad de financiamiento y proveedor antes de publicar.",
+      verified: false,
+    },
+  ],
+},
 
   services: {
     eyebrow: "Nuestros Servicios",
@@ -153,26 +153,26 @@ export const home = {
     ],
   },
 
-  beforeAfter: {
-    eyebrow: "Antes y Después",
+ beforeAfter: {
+  eyebrow: "Antes y Después",
 
-    title: "Mira Cómo Puede Cambiar un Espacio Con una Buena Remodelación",
+  title: "Visualiza Cómo Puede Cambiar un Espacio Con una Remodelación",
 
-    description:
-      "Utiliza el control deslizante para comparar el espacio antes y después de la renovación.",
+  description:
+    "Utiliza el control deslizante para comparar un ejemplo visual de un espacio antes y después de una remodelación.",
 
-    beforeLabel: "Antes",
-    afterLabel: "Después",
+  beforeLabel: "Antes",
+  afterLabel: "Después",
 
-    imageBefore: "/images/before1.png",
-    imageAfter: "/images/after1.png",
+  imageBefore: "/images/before1.png",
+  imageAfter: "/images/after1.png",
 
-    altBefore: "Cocina antes de la remodelación",
-    altAfter: "Cocina después de la remodelación",
+  altBefore: "Ejemplo de cocina antes de una remodelación",
+  altAfter: "Ejemplo de cocina después de una remodelación",
 
-    disclaimer:
-      "IMÁGENES PLACEHOLDER: Reemplazar con fotografías verificadas de proyectos de Alamo Rise antes de producción.",
-  },
+  disclaimer:
+    "Estas imágenes se muestran como ejemplos visuales de remodelación y no se presentan como un proyecto terminado y verificado de Alamo Rise Home Solutions.",
+},
 
     featuredProjects: {
     eyebrow: "Ideas de Remodelación",
@@ -349,29 +349,29 @@ export const home = {
     cta: "Leer Nuestras Reseñas en Google",
   },
 
-  about: {
-    eyebrow: "Sobre Alamo Rise",
+ about: {
+  eyebrow: "Sobre Alamo Rise",
 
-    title: "Mejoras para el Hogar Con un Enfoque Local y Personal",
+  title: "Mejoras para el Hogar Con un Enfoque Local y Personal",
 
-    description:
-      "Alamo Rise Home Solutions se enfoca en proyectos residenciales de remodelación y mejoras para el hogar en el área de San Antonio. El objetivo es hacer que el proceso sea más fácil de entender, coordinar y llevar para cada propietario.",
+  description:
+    "Alamo Rise Home Solutions se enfoca en proyectos residenciales de remodelación y mejoras para el hogar en el área de San Antonio. El objetivo es hacer que el proceso sea más fácil de entender, coordinar y llevar para cada propietario.",
 
-    secondaryDescription:
-      "Desde la primera conversación hasta la revisión final, la experiencia debe sentirse organizada, profesional y enfocada en las necesidades de tu hogar.",
+  secondaryDescription:
+    "Desde la primera conversación hasta la revisión final, la experiencia debe sentirse organizada, profesional y enfocada en las necesidades de tu hogar.",
 
-    image: "/images/about.png",
+  image: "/images/about.png",
 
-    imageAlt:
-      "Equipo de remodelación residencial de Alamo Rise Home Solutions en San Antonio",
+  imageAlt:
+    "Imagen de referencia sobre remodelación residencial y mejoras para el hogar",
 
-    imageVerified: false,
+  imageVerified: false,
 
-    imageNotice:
-      "IMAGEN PLACEHOLDER: Reemplazar con una fotografía verificada del equipo o de un proyecto de Alamo Rise antes de producción.",
+  imageNotice:
+    "Imagen de referencia. Reemplazar con una fotografía verificada del equipo o de un proyecto de Alamo Rise cuando esté disponible.",
 
-    cta: "Conoce Más Sobre Nosotros",
-  },
+  cta: "Conoce Más Sobre Nosotros",
+},
 
   financing: {
     eyebrow: "Financiamiento",

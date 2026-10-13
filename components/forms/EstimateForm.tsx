@@ -1,6 +1,6 @@
 "use client";
 
-import { useState } from "react";
+import { useRef, useState } from "react";
 import { useRouter } from "next/navigation";
 import { CheckCircle2, LoaderCircle } from "lucide-react";
 
@@ -85,6 +85,8 @@ export function EstimateForm({
   const [errorMessage, setErrorMessage] =
     useState<string | null>(null);
 
+    const hasTrackedFormStart = useRef(false);
+
   const dictionary =
     locale === "en"
       ? englishCommon
@@ -96,6 +98,20 @@ export function EstimateForm({
     locale === "en"
       ? routes.en.thankYou
       : routes.es.thankYou;
+
+function handleFormStart() {
+  if (hasTrackedFormStart.current) {
+    return;
+  }
+
+  hasTrackedFormStart.current = true;
+
+  trackEvent("form_start", {
+    location: "estimate_form",
+    locale,
+  });
+}
+
 
   async function handleSubmit(
     event: React.FormEvent<HTMLFormElement>,
@@ -236,7 +252,9 @@ router.push(thankYouUrl);
   return (
     <form
       onSubmit={handleSubmit}
+      onFocusCapture={handleFormStart}
       noValidate
+      aria-busy={status === "submitting"}
       className="space-y-6"
     >
       <div>
@@ -343,7 +361,7 @@ router.push(thankYouUrl);
             type="email"
             autoComplete="email"
             required
-            maxLength={254}
+            maxLength={150}
             placeholder={form.placeholders.email}
             className="min-h-12 px-4 py-3"
           />

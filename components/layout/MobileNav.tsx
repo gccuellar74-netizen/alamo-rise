@@ -1,6 +1,6 @@
 "use client";
 
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import Link from "next/link";
 import { Menu, X } from "lucide-react";
 
@@ -26,11 +26,35 @@ export function MobileNav({ locale }: MobileNavProps) {
     setIsOpen(false);
   }
 
+  useEffect(() => {
+    if (!isOpen) {
+      return;
+    }
+
+    function handleKeyDown(event: KeyboardEvent) {
+      if (event.key === "Escape") {
+        setIsOpen(false);
+      }
+    }
+
+    const previousOverflow = document.body.style.overflow;
+
+    document.body.style.overflow = "hidden";
+    window.addEventListener("keydown", handleKeyDown);
+
+    return () => {
+      document.body.style.overflow = previousOverflow;
+      window.removeEventListener("keydown", handleKeyDown);
+    };
+  }, [isOpen]);
+
   return (
     <div className="relative lg:hidden">
       <button
         type="button"
-        onClick={() => setIsOpen((current) => !current)}
+        onClick={() =>
+          setIsOpen((current) => !current)
+        }
         aria-expanded={isOpen}
         aria-controls="mobile-navigation"
         aria-label={
@@ -45,9 +69,15 @@ export function MobileNav({ locale }: MobileNavProps) {
         className="inline-flex size-11 items-center justify-center rounded-md border border-charcoal-200 bg-white text-charcoal-950 transition-colors hover:bg-charcoal-50 focus-visible:outline-none focus-visible:ring-4 focus-visible:ring-brand-600/20"
       >
         {isOpen ? (
-          <X aria-hidden="true" className="size-5" />
+          <X
+            aria-hidden="true"
+            className="size-5"
+          />
         ) : (
-          <Menu aria-hidden="true" className="size-5" />
+          <Menu
+            aria-hidden="true"
+            className="size-5"
+          />
         )}
       </button>
 

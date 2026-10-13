@@ -66,11 +66,10 @@ export function AboutPreview({
                 />
               </Link>
             </div>
-
           </div>
 
           <div className="order-1 lg:order-2">
-            <div className="relative overflow-hidden rounded-2xl bg-charcoal-100 shadow-elevated">
+            <div className="overflow-hidden rounded-2xl bg-charcoal-100 shadow-elevated">
               <div className="relative aspect-[4/3]">
                 <Image
                   src={content.image}
@@ -80,8 +79,14 @@ export function AboutPreview({
                   className="object-cover"
                 />
               </div>
-
             </div>
+
+            {!content.imageVerified &&
+            content.imageNotice ? (
+              <p className="mt-3 text-center text-xs leading-5 text-charcoal-500">
+                {content.imageNotice}
+              </p>
+            ) : null}
           </div>
         </div>
       </Container>

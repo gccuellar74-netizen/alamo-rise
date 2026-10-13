@@ -21,14 +21,15 @@ export function LanguageSwitcher({
   const spanishPath = getLocalizedPath(pathname, "es");
 
   return (
-    <div
-      className="inline-flex items-center rounded-md border border-charcoal-200 bg-white p-1"
-      aria-label={
-        locale === "en"
-          ? "Language selector"
-          : "Selector de idioma"
-      }
-    >
+      <div
+        role="group"
+        className="inline-flex items-center rounded-md border border-charcoal-200 bg-white p-1"
+        aria-label={
+          locale === "en"
+            ? "Language selector"
+            : "Selector de idioma"
+        }
+      >
       <Link
         href={englishPath}
         lang="en"

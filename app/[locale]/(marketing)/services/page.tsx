@@ -28,9 +28,10 @@ export async function generateMetadata({
   const content = await getDictionary("en", "services");
 
   return {
-   title: {
+    title: {
       absolute: content.seo.title,
-          },
+    },
+
     description: content.seo.description,
 
     alternates: {
@@ -45,11 +46,24 @@ export async function generateMetadata({
 
     openGraph: {
       type: "website",
-        title: content.seo.title,
+      title: content.seo.title,
       description: content.seo.description,
       url: routes.en.services,
       locale: "en_US",
       alternateLocale: ["es_US"],
+      images: [
+        {
+          url: "/images/social/alamo-rise-og-image.jpg",
+          alt: "Alamo Rise Home Solutions",
+        },
+      ],
+    },
+
+    twitter: {
+      card: "summary_large_image",
+      title: content.seo.title,
+      description: content.seo.description,
+      images: ["/images/social/alamo-rise-og-image.jpg"],
     },
   };
 }
@@ -67,10 +81,7 @@ export default async function ServicesRoute({
     redirect(routes.es.services);
   }
 
-  const content = await getDictionary(
-    "en",
-    "services",
-  );
+  const content = await getDictionary("en", "services");
 
   return (
     <ServicesPage

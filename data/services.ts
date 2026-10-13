@@ -22,10 +22,10 @@ export const services = [
 
     image: "/images/kitchen.png",
 
-    imageAlt: {
-      en: "Kitchen remodeling project in San Antonio, Texas",
-      es: "Proyecto de remodelación de cocina en San Antonio, Texas",
-    },
+imageAlt: {
+  en: "Kitchen remodeling reference image",
+  es: "Imagen de referencia de remodelación de cocina",
+},
 
     featured: true,
   },
@@ -51,10 +51,10 @@ export const services = [
 
    image: "/images/bathroom.png",
 
-    imageAlt: {
-      en: "Bathroom remodeling project in San Antonio, Texas",
-      es: "Proyecto de remodelación de baño en San Antonio, Texas",
-    },
+imageAlt: {
+  en: "Bathroom remodeling reference image",
+  es: "Imagen de referencia de remodelación de baño",
+},
 
     featured: true,
   },
@@ -80,10 +80,10 @@ export const services = [
 
     image: "/images/interior.png",
 
-    imageAlt: {
-      en: "Residential interior remodeling in San Antonio, Texas",
-      es: "Remodelación residencial de interiores en San Antonio, Texas",
-    },
+imageAlt: {
+  en: "Residential interior remodeling reference image",
+  es: "Imagen de referencia de remodelación residencial de interiores",
+},
 
     featured: true,
   },
@@ -108,10 +108,10 @@ export const services = [
     },
     image: "/images/flooring.png",
 
-    imageAlt: {
-      en: "Residential flooring installation in San Antonio, Texas",
-      es: "Instalación de pisos residenciales en San Antonio, Texas",
-    },
+imageAlt: {
+  en: "Residential flooring reference image",
+  es: "Imagen de referencia de pisos residenciales",
+},
 
     featured: false,
   },
@@ -137,10 +137,10 @@ export const services = [
 
     image: "/images/drywall.png",
 
-    imageAlt: {
-      en: "Residential drywall installation and repair in San Antonio",
-      es: "Instalación y reparación residencial de drywall en San Antonio",
-    },
+imageAlt: {
+  en: "Residential drywall installation and repair reference image",
+  es: "Imagen de referencia de instalación y reparación de drywall residencial",
+},
 
     featured: false,
   },
@@ -166,10 +166,10 @@ export const services = [
 
     image: "/images/painting.png",
 
-    imageAlt: {
-      en: "Interior and exterior residential painting in San Antonio",
-      es: "Pintura residencial interior y exterior en San Antonio",
-    },
+imageAlt: {
+  en: "Interior and exterior residential painting reference image",
+  es: "Imagen de referencia de pintura residencial interior y exterior",
+},
 
     featured: false,
   },
@@ -195,10 +195,10 @@ export const services = [
 
     image:"/images/siding.png",
 
-    imageAlt: {
-      en: "Residential siding improvement in San Antonio, Texas",
-      es: "Mejora de revestimiento residencial en San Antonio, Texas",
-    },
+imageAlt: {
+  en: "Residential siding reference image",
+  es: "Imagen de referencia de revestimiento residencial",
+},
 
     featured: false,
   },
@@ -225,10 +225,10 @@ export const services = [
     image:
       "/images/windows.png",
 
-    imageAlt: {
-      en: "Residential window and door improvements in San Antonio",
-      es: "Mejoras residenciales de ventanas y puertas en San Antonio",
-    },
+imageAlt: {
+  en: "Residential window and door improvement reference image",
+  es: "Imagen de referencia de mejoras residenciales de ventanas y puertas",
+},
 
     featured: false,
   },
@@ -255,10 +255,10 @@ export const services = [
     image:
       "/images/patio2.png",
 
-    imageAlt: {
-      en: "Residential patio improvement in San Antonio, Texas",
-      es: "Mejora de patio residencial en San Antonio, Texas",
-    },
+imageAlt: {
+  en: "Residential patio improvement reference image",
+  es: "Imagen de referencia de mejoras para patio residencial",
+},
 
     featured: false,
   },
@@ -285,10 +285,10 @@ export const services = [
     image:
       "/images/pergola.png",
 
-    imageAlt: {
-      en: "Residential pergola in San Antonio, Texas",
-      es: "Pérgola residencial en San Antonio, Texas",
-    },
+imageAlt: {
+  en: "Residential pergola reference image",
+  es: "Imagen de referencia de pérgola residencial",
+},
 
     featured: false,
   },
@@ -315,10 +315,10 @@ export const services = [
     image:
       "/images/repairs.png",
 
-    imageAlt: {
-      en: "Residential home repair and improvement project in San Antonio",
-      es: "Proyecto residencial de reparaciones y mejoras en San Antonio",
-    },
+imageAlt: {
+  en: "Residential home repair and improvement reference image",
+  es: "Imagen de referencia de reparaciones y mejoras residenciales",
+},
 
     featured: false,
   },

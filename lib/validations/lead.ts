@@ -1,8 +1,6 @@
 import { z } from "zod";
 
-const optionalText = (
-  maxLength: number,
-) =>
+const optionalText = (maxLength: number) =>
   z
     .string()
     .trim()
@@ -35,40 +33,26 @@ const optionalDate = z
         return true;
       }
 
-      if (
-        !/^\d{4}-\d{2}-\d{2}$/.test(
-          value,
-        )
-      ) {
+      if (!/^\d{4}-\d{2}-\d{2}$/.test(value)) {
         return false;
       }
 
-      const [
-        year,
-        month,
-        day,
-      ] = value
+      const [year, month, day] = value
         .split("-")
         .map(Number);
 
       const date = new Date(
-        Date.UTC(
-          year,
-          month - 1,
-          day,
-        ),
+        Date.UTC(year, month - 1, day),
       );
 
       return (
         date.getUTCFullYear() === year &&
-        date.getUTCMonth() ===
-          month - 1 &&
+        date.getUTCMonth() === month - 1 &&
         date.getUTCDate() === day
       );
     },
     {
-      message:
-        "Enter a valid date.",
+      message: "Enter a valid date.",
     },
   );
 
@@ -93,7 +77,7 @@ export const leadSchema = z.object({
       "Phone number is too short.",
     )
     .max(
-      40,
+      30,
       "Phone number is too long.",
     )
     .regex(
@@ -135,11 +119,31 @@ export const leadSchema = z.object({
       "Project type is too long.",
     ),
 
-  budget: optionalText(100),
+  budget: z
+    .string()
+    .trim()
+    .min(
+      1,
+      "Budget range is required.",
+    )
+    .max(
+      100,
+      "Budget range is too long.",
+    ),
 
   desiredStartDate: optionalDate,
 
-  details: optionalText(5000),
+  details: z
+    .string()
+    .trim()
+    .min(
+      10,
+      "Project details must contain at least 10 characters.",
+    )
+    .max(
+      3000,
+      "Project details are too long.",
+    ),
 
   language: z.enum([
     "en",
@@ -167,7 +171,7 @@ export const leadSchema = z.object({
 
   referrer: optionalText(2000),
 
-  /*
+  /**
    * Honeypot anti-spam.
    *
    * A real user should never fill this field.

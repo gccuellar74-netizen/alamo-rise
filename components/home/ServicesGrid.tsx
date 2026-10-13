@@ -98,10 +98,10 @@ export function ServicesGrid({
                     <Image
                       src={service.image}
                       alt={
-                        locale === "en"
-                          ? `${service.title} in San Antonio, Texas`
-                          : `${service.title} en San Antonio, Texas`
-                      }
+                          locale === "en"
+                            ? `${service.title} reference image`
+                            : `Imagen de referencia de ${service.title.toLowerCase()}`
+                        }
                       fill
                       sizes="(max-width: 639px) 100vw, (max-width: 1023px) 50vw, 33vw"
                       className="object-cover transition-transform duration-500 group-hover:scale-[1.03]"

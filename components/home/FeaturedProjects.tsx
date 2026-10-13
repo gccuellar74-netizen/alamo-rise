@@ -72,7 +72,11 @@ export function FeaturedProjects({
               <div className="relative aspect-[4/3] overflow-hidden bg-charcoal-100">
                 <Image
                   src={project.image}
-                  alt={`${project.title} — ${project.location}`}
+                  alt={
+                    locale === "en"
+                      ? `${project.title} reference image`
+                      : `Imagen de referencia de ${project.title.toLowerCase()}`
+                  }
                   fill
                   sizes="(max-width: 767px) 100vw, (max-width: 1023px) 50vw, 33vw"
                   className="object-cover transition-transform duration-500 group-hover:scale-[1.03]"
@@ -107,13 +111,13 @@ export function FeaturedProjects({
                   className="mt-5 inline-flex items-center gap-2 text-sm font-bold text-brand-700 transition-colors hover:text-brand-800 focus-visible:outline-none focus-visible:ring-4 focus-visible:ring-brand-600/20"
                   aria-label={`${project.title} — ${
                     locale === "en"
-                      ? "View project"
-                      : "Ver proyecto"
+                      ? "View project examples"
+                      : "Ver ejemplos de proyectos"
                   }`}
                 >
-                  {locale === "en"
-                    ? "View Project"
-                    : "Ver Proyecto"}
+                 {locale === "en"
+                  ? "View Examples"
+                  : "Ver Ejemplos"}
 
                   <ArrowRight
                     aria-hidden="true"

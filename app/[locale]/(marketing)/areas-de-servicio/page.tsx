@@ -25,15 +25,13 @@ export async function generateMetadata({
     return {};
   }
 
-  const content = await getDictionary(
-    "es",
-    "serviceAreas",
-  );
+  const content = await getDictionary("es", "serviceAreas");
 
   return {
     title: {
-  absolute: content.seo.title,
-          },
+      absolute: content.seo.title,
+    },
+
     description: content.seo.description,
 
     alternates: {
@@ -53,6 +51,19 @@ export async function generateMetadata({
       url: routes.es.serviceAreas,
       locale: "es_US",
       alternateLocale: ["en_US"],
+      images: [
+        {
+          url: "/images/social/alamo-rise-og-image.jpg",
+          alt: "Alamo Rise Home Solutions",
+        },
+      ],
+    },
+
+    twitter: {
+      card: "summary_large_image",
+      title: content.seo.title,
+      description: content.seo.description,
+      images: ["/images/social/alamo-rise-og-image.jpg"],
     },
   };
 }
@@ -70,10 +81,7 @@ export default async function AreasDeServicioRoute({
     redirect(routes.en.serviceAreas);
   }
 
-  const content = await getDictionary(
-    "es",
-    "serviceAreas",
-  );
+  const content = await getDictionary("es", "serviceAreas");
 
   return (
     <ServiceAreasPage

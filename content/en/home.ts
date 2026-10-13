@@ -28,37 +28,37 @@ export const home = {
     },
   },
 
-  trustBar: {
-    items: [
-      {
-        key: "local-team",
-        title: "Local San Antonio Team",
-        description:
-          "Focused on residential remodeling and home improvement projects throughout the San Antonio area.",
-        verified: true,
-      },
-      {
-        key: "insured",
-        title: "Insured",
-        description: "VERIFY: Confirm current insurance status before publishing.",
-        verified: false,
-      },
-      {
-        key: "workmanship-warranty",
-        title: "Workmanship Warranty",
-        description:
-          "VERIFY: Confirm warranty availability and terms before publishing.",
-        verified: false,
-      },
-      {
-        key: "financing",
-        title: "Financing Available",
-        description:
-          "VERIFY: Confirm financing availability and provider before publishing.",
-        verified: false,
-      },
-    ],
-  },
+ trustBar: {
+  items: [
+    {
+      key: "local-focus",
+      title: "Focused on the San Antonio Area",
+      description:
+        "Residential remodeling and home improvement services focused on homeowners in the San Antonio area.",
+      verified: true,
+    },
+    {
+      key: "insured",
+      title: "Insured",
+      description: "VERIFY: Confirm current insurance status before publishing.",
+      verified: false,
+    },
+    {
+      key: "workmanship-warranty",
+      title: "Workmanship Warranty",
+      description:
+        "VERIFY: Confirm warranty availability and terms before publishing.",
+      verified: false,
+    },
+    {
+      key: "financing",
+      title: "Financing Available",
+      description:
+        "VERIFY: Confirm financing availability and provider before publishing.",
+      verified: false,
+    },
+  ],
+},
 
   services: {
     eyebrow: "Our Services",
@@ -151,27 +151,26 @@ export const home = {
     ],
   },
 
-  beforeAfter: {
-    eyebrow: "Before & After",
+beforeAfter: {
+  eyebrow: "Before & After",
 
-    title: "See the Difference a Thoughtful Remodel Can Make",
+  title: "Visualize the Difference a Remodel Can Make",
 
-    description:
-      "Use the slider to compare a space before and after renovation.",
+  description:
+    "Use the slider to compare an example space before and after a remodeling transformation.",
 
-    beforeLabel: "Before",
-    afterLabel: "After",
+  beforeLabel: "Before",
+  afterLabel: "After",
 
-    imageBefore: "/images/before1.png",
-    imageAfter: "/images/after1.png",
+  imageBefore: "/images/before1.png",
+  imageAfter: "/images/after1.png",
 
-    altBefore: "Kitchen before remodeling",
-    altAfter: "/images/after1.png",
+  altBefore: "Example kitchen before remodeling",
+  altAfter: "Example kitchen after remodeling",
 
-    disclaimer:
-      "",
-  },
-
+  disclaimer:
+    "These images are shown as visual remodeling examples and are not presented as a verified Alamo Rise completed project.",
+},
  featuredProjects: {
   eyebrow: "Project Examples",
 
@@ -347,29 +346,29 @@ export const home = {
     cta: "Read Our Google Reviews",
   },
 
-  about: {
-    eyebrow: "About Alamo Rise",
+about: {
+  eyebrow: "About Alamo Rise",
 
-    title: "Local Home Improvement With a Personal Approach",
+  title: "Local Home Improvement With a Personal Approach",
 
-    description:
-      "Alamo Rise Home Solutions focuses on residential remodeling and home improvement projects in the San Antonio area. The goal is to make the process easier to understand, easier to coordinate and more comfortable for homeowners.",
+  description:
+    "Alamo Rise Home Solutions focuses on residential remodeling and home improvement projects in the San Antonio area. The goal is to make the process easier to understand, easier to coordinate and more comfortable for homeowners.",
 
-    secondaryDescription:
-      "From the first conversation through the final walkthrough, the experience should feel organized, professional and focused on the needs of your home.",
+  secondaryDescription:
+    "From the first conversation through the final walkthrough, the experience should feel organized, professional and focused on the needs of your home.",
 
-    image: "/images/about.png",
+  image: "/images/about.png",
 
-    imageAlt:
-      "Alamo Rise Home Solutions residential remodeling team in San Antonio",
+  imageAlt:
+    "Residential remodeling and home improvement reference image",
 
-    imageVerified: false,
+  imageVerified: false,
 
-    imageNotice:
-      "PLACEHOLDER IMAGE: Replace with a verified Alamo Rise team or project photo before production.",
+  imageNotice:
+    "Reference image only. Replace with a verified Alamo Rise team or project photo when one is available.",
 
-    cta: "Learn More About Us",
-  },
+  cta: "Learn More About Us",
+},
 
   financing: {
     eyebrow: "Financing",

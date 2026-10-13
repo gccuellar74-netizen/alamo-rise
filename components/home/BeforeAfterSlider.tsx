@@ -31,6 +31,7 @@ export function BeforeAfterSlider({
     }
 
     const rect = container.getBoundingClientRect();
+
     const nextPosition =
       ((clientX - rect.left) / rect.width) * 100;
 
@@ -43,9 +44,11 @@ export function BeforeAfterSlider({
     event: React.PointerEvent<HTMLDivElement>,
   ) {
     setIsDragging(true);
+
     event.currentTarget.setPointerCapture(
       event.pointerId,
     );
+
     updatePosition(event.clientX);
   }
 
@@ -82,6 +85,7 @@ export function BeforeAfterSlider({
 
     if (event.key === "ArrowLeft") {
       event.preventDefault();
+
       setPosition((current) =>
         Math.max(0, current - step),
       );
@@ -89,6 +93,7 @@ export function BeforeAfterSlider({
 
     if (event.key === "ArrowRight") {
       event.preventDefault();
+
       setPosition((current) =>
         Math.min(100, current + step),
       );
@@ -131,7 +136,7 @@ export function BeforeAfterSlider({
         <div className="mx-auto mt-10 max-w-5xl lg:mt-14">
           <div
             ref={containerRef}
-            className="relative aspect-[4/3] select-none overflow-hidden rounded-2xl bg-charcoal-100 shadow-elevated sm:aspect-[16/10] lg:aspect-[16/9]"
+            className="relative aspect-[4/3] cursor-ew-resize touch-none select-none overflow-hidden rounded-2xl bg-charcoal-100 shadow-elevated sm:aspect-[16/10] lg:aspect-[16/9]"
             onPointerDown={handlePointerDown}
             onPointerMove={handlePointerMove}
             onPointerUp={handlePointerUp}
@@ -147,18 +152,18 @@ export function BeforeAfterSlider({
 
             <div
               className="absolute inset-0 overflow-hidden"
-                style={{
-                  clipPath: `inset(0 ${100 - position}% 0 0)`,
-                }}
-              >
-                <Image
-                  src={content.imageBefore}
-                  alt={content.altBefore}
-                  fill
-                  sizes="(max-width: 1023px) 100vw, 80rem"
-                  className="pointer-events-none object-cover"
-                />
-              </div>
+              style={{
+                clipPath: `inset(0 ${100 - position}% 0 0)`,
+              }}
+            >
+              <Image
+                src={content.imageBefore}
+                alt={content.altBefore}
+                fill
+                sizes="(max-width: 1023px) 100vw, 80rem"
+                className="pointer-events-none object-cover"
+              />
+            </div>
 
             <div className="pointer-events-none absolute left-4 top-4 rounded-full bg-black/65 px-3 py-1.5 text-xs font-bold uppercase tracking-[0.12em] text-white backdrop-blur-sm">
               {content.beforeLabel}
@@ -180,11 +185,13 @@ export function BeforeAfterSlider({
               type="button"
               role="slider"
               aria-label={`${content.beforeLabel} / ${content.afterLabel}`}
+              aria-orientation="horizontal"
               aria-valuemin={0}
               aria-valuemax={100}
               aria-valuenow={Math.round(position)}
+              aria-valuetext={`${Math.round(position)}%`}
               onKeyDown={handleKeyDown}
-              className="absolute top-1/2 z-10 flex size-12 -translate-x-1/2 -translate-y-1/2 items-center justify-center rounded-full border-2 border-white bg-brand-600 text-white shadow-elevated transition-transform hover:scale-105 focus-visible:outline-none focus-visible:ring-4 focus-visible:ring-brand-600/25"
+              className="absolute top-1/2 z-10 flex size-12 cursor-ew-resize -translate-x-1/2 -translate-y-1/2 items-center justify-center rounded-full border-2 border-white bg-brand-600 text-white shadow-elevated transition-transform hover:scale-105 focus-visible:outline-none focus-visible:ring-4 focus-visible:ring-brand-600/25"
               style={{
                 left: `${position}%`,
               }}

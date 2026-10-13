@@ -283,7 +283,7 @@ export const serviceDetails = [
 
     en: {
       seoTitle:
-        "Flooring Installation San Antonio TX | Alamo Rise",
+          "Flooring Improvements San Antonio TX | Alamo Rise",
 
       seoDescription:
         "Residential flooring improvements in San Antonio, TX for homeowners replacing worn, damaged or outdated floors.",
@@ -713,7 +713,7 @@ export const serviceDetails = [
 
     en: {
       seoTitle:
-        "Patio Improvements San Antonio TX | Alamo Rise Home Solutions",
+        "Patio Improvements San Antonio TX | Alamo Rise",
 
       seoDescription:
         "Residential patio improvements in San Antonio, TX designed to make outdoor living areas more useful, comfortable and visually connected to the home.",

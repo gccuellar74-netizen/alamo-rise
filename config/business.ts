@@ -9,8 +9,8 @@
  */
 
 const siteUrl =
-  process.env.NEXT_PUBLIC_SITE_URL?.replace(/\/$/, "") ??
-  "http://localhost:3000";
+  process.env.NEXT_PUBLIC_SITE_URL?.replace(/\/+$/, "") ??
+  "https://www.alamorise.com";
 
 export const business = {
   /**
@@ -137,7 +137,6 @@ export const business = {
    * Brand assets
    *
    * These are internal application paths.
-   * We will prepare the actual optimized files later.
    */
   brand: {
     logo: "/images/logo.png",
@@ -149,9 +148,9 @@ export const business = {
   /**
    * SEO / Schema classification
    *
-   * HomeAndConstructionBusiness accurately describes the
-   * services in the current project brief without asserting
-   * an unverified professional license.
+   * HomeAndConstructionBusiness describes the current
+   * service offering without asserting an unverified
+   * professional license.
    */
   schema: {
     type: "HomeAndConstructionBusiness",

@@ -1,40 +1,90 @@
 import { NextRequest, NextResponse } from "next/server";
 
-const PUBLIC_FILE = /\.(.*)$/;
+const PUBLIC_FILE = /\.[^/]+$/;
+
 const SUPPORTED_LOCALES = ["en", "es"] as const;
 const DEFAULT_LOCALE = "en";
 
 type Locale = (typeof SUPPORTED_LOCALES)[number];
 
-function getPreferredLocale(request: NextRequest): Locale {
-  const acceptLanguage = request.headers.get("accept-language")?.toLowerCase();
+function getPreferredLocale(
+  request: NextRequest,
+): Locale {
+  const acceptLanguage =
+    request.headers.get("accept-language");
 
-  if (acceptLanguage?.startsWith("es")) {
-    return "es";
+  if (!acceptLanguage) {
+    return DEFAULT_LOCALE;
+  }
+
+  const languages = acceptLanguage
+    .toLowerCase()
+    .split(",")
+    .map((entry) => {
+      const [language, qualityValue] =
+        entry.trim().split(";q=");
+
+      return {
+        language,
+        quality: qualityValue
+          ? Number.parseFloat(qualityValue)
+          : 1,
+      };
+    })
+    .filter(
+      (
+        item,
+      ): item is {
+        language: string;
+        quality: number;
+      } =>
+        Boolean(item.language) &&
+        Number.isFinite(item.quality),
+    )
+    .sort((a, b) => b.quality - a.quality);
+
+  for (const { language } of languages) {
+    if (
+      language === "es" ||
+      language.startsWith("es-")
+    ) {
+      return "es";
+    }
+
+    if (
+      language === "en" ||
+      language.startsWith("en-")
+    ) {
+      return "en";
+    }
   }
 
   return DEFAULT_LOCALE;
 }
 
-export default function proxy(request: NextRequest) {
+export default function proxy(
+  request: NextRequest,
+) {
   const { pathname } = request.nextUrl;
 
   if (
     pathname.startsWith("/api") ||
     pathname.startsWith("/_next") ||
-    pathname.startsWith("/favicon.ico") ||
-    pathname.startsWith("/robots.txt") ||
-    pathname.startsWith("/sitemap.xml") ||
-    pathname.startsWith("/manifest.webmanifest") ||
+    pathname === "/favicon.ico" ||
+    pathname === "/robots.txt" ||
+    pathname === "/sitemap.xml" ||
+    pathname === "/manifest.webmanifest" ||
     PUBLIC_FILE.test(pathname)
   ) {
     return NextResponse.next();
   }
 
-  const pathnameHasLocale = SUPPORTED_LOCALES.some(
-    (locale) =>
-      pathname === `/${locale}` || pathname.startsWith(`/${locale}/`)
-  );
+  const pathnameHasLocale =
+    SUPPORTED_LOCALES.some(
+      (locale) =>
+        pathname === `/${locale}` ||
+        pathname.startsWith(`/${locale}/`),
+    );
 
   if (pathnameHasLocale) {
     return NextResponse.next();
@@ -43,11 +93,17 @@ export default function proxy(request: NextRequest) {
   const locale = getPreferredLocale(request);
 
   const url = request.nextUrl.clone();
-  url.pathname = pathname === "/" ? `/${locale}` : `/${locale}${pathname}`;
+
+  url.pathname =
+    pathname === "/"
+      ? `/${locale}`
+      : `/${locale}${pathname}`;
 
   return NextResponse.redirect(url);
 }
 
 export const config = {
-  matcher: ["/((?!_next/static|_next/image).*)"],
+  matcher: [
+    "/((?!_next/static|_next/image).*)",
+  ],
 };

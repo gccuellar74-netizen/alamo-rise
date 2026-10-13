@@ -25,15 +25,13 @@ export async function generateMetadata({
     return {};
   }
 
-  const content = await getDictionary(
-    "en",
-    "contact",
-  );
+  const content = await getDictionary("en", "contact");
 
   return {
     title: {
-  absolute: content.seo.title,
-          },
+      absolute: content.seo.title,
+    },
+
     description: content.seo.description,
 
     alternates: {
@@ -53,6 +51,19 @@ export async function generateMetadata({
       url: routes.en.contact,
       locale: "en_US",
       alternateLocale: ["es_US"],
+      images: [
+        {
+          url: "/images/social/alamo-rise-og-image.jpg",
+          alt: "Alamo Rise Home Solutions",
+        },
+      ],
+    },
+
+    twitter: {
+      card: "summary_large_image",
+      title: content.seo.title,
+      description: content.seo.description,
+      images: ["/images/social/alamo-rise-og-image.jpg"],
     },
   };
 }
@@ -70,10 +81,7 @@ export default async function ContactRoute({
     redirect(routes.es.contact);
   }
 
-  const content = await getDictionary(
-    "en",
-    "contact",
-  );
+  const content = await getDictionary("en", "contact");
 
   return (
     <ContactPage

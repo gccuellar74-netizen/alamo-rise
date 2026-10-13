@@ -190,9 +190,9 @@ export function ServiceDetailPage({
                   href={estimateUrl}
                   className="inline-flex min-h-14 items-center justify-center gap-2 rounded-md bg-brand-600 px-6 py-3.5 text-base font-semibold text-white shadow-sm transition-colors hover:bg-brand-700 active:bg-brand-800 focus-visible:outline-none focus-visible:ring-4 focus-visible:ring-brand-600/20"
                 >
-                  {isEnglish
-                    ? "Get a Free Estimate"
-                    : "Solicita una Cotización Gratis"}
+                 {isEnglish
+                  ? "Request an Estimate"
+                  : "Solicita una Cotización"}
 
                   <ArrowRight
                     aria-hidden="true"

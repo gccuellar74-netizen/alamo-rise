@@ -1,7 +1,7 @@
 import { business } from "@/config/business";
 
 const siteUrl =
-  process.env.NEXT_PUBLIC_SITE_URL?.replace(/\/$/, "") ??
+  process.env.NEXT_PUBLIC_SITE_URL?.replace(/\/+$/, "") ??
   "https://www.alamorise.com";
 
 export const seo = {
@@ -20,13 +20,13 @@ export const seo = {
 
   localeMap: {
     en: {
-      htmlLang: "en",
+      htmlLang: "en-US",
       hreflang: "en-US",
       openGraphLocale: "en_US",
     },
 
     es: {
-      htmlLang: "es",
+      htmlLang: "es-US",
       hreflang: "es-US",
       openGraphLocale: "es_US",
     },
